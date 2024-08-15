@@ -1,6 +1,6 @@
 # Toratora
 
-Streaming Anime Free
+Streaming Anime Free with blog 
 
 ## Styling and UI
 - Tailwindcss
