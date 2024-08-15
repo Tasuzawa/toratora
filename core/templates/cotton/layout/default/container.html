@@ -1,5 +1,9 @@
 <c-layout.default.base>
-    {{header}}
+    <c-slot name="header">
+        <c-layout.default.header />
+    </c-slot>
     {{slot}}
-    {{footer}}
+    <c-slot name="footer">
+        <c-layout.default.footer />
+    </c-slot>
 </c-layout.default.base>
