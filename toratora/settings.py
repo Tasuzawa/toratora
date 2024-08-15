@@ -107,10 +107,10 @@ WSGI_APPLICATION = 'toratora.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'sumatorato',
-        'USER': 'sumatorato_owner',
-        'PASSWORD': 'D3fLZxYSqCU2',
-        'HOST': 'ep-misty-base-a1kpyccf.ap-southeast-1.aws.neon.tech',
+        'NAME': 'sumatoratora',
+        'USER': 'sumatoratora_owner',
+        'PASSWORD': 'MxhT4WqtmyH7',
+        'HOST': 'ep-lingering-dawn-a14w6ujr.ap-southeast-1.aws.neon.tech',
         'PORT': '5432',
         'OPTIONS': {
             'sslmode': 'require',
