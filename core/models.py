@@ -61,4 +61,4 @@ class Episode(models.Model):
         ordering = ['nomor_episode']
 
     def __str__(self):
-        return f'{self.anime.judul} - Episode {self.nomor_episode}'
+        return f'{self.anime.judul} - Episode {self.nomor_episode} - {self.judul_episode}'
