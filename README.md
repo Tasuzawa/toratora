@@ -1,6 +1,7 @@
 # Toratora
 
-For Start Project With Django 
+Streaming Anime Free
+
 ## Styling and UI
 - Tailwindcss
 - Preline UI

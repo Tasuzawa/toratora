@@ -33,7 +33,7 @@ ALLOWED_HOSTS = [
 
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://*.cluster-3g4scxt2njdd6uovkqyfcabgo6.cloudworkstations.dev',
+    'https://*.cluster-e3wv6awer5h7kvayyfoein2u4a.cloudworkstations.dev',
 ]
 
 # Application definition
