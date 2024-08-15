@@ -25,18 +25,37 @@ SECRET_KEY = 'django-insecure-816!lgu+4gp&z2gv_luuer#oj0)%m6bs5^8_u778du1bsyqi)z
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1',
+    '*',
+]
 
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://*.cluster-3g4scxt2njdd6uovkqyfcabgo6.cloudworkstations.dev',
+]
 
 # Application definition
 
 INSTALLED_APPS = [
+    'unfold',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles',
+    #'django.contrib.staticfiles',
+    
+    ## Packages ##
+    'django_components',
+    'django_components.safer_staticfiles',
+    'django_cotton',
+    'tailwind',
+    'theme',
+    
+    ## Apps ##
+    'core',
 ]
 
 MIDDLEWARE = [
@@ -55,13 +74,25 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [],
-        'APP_DIRS': True,
+        'APP_DIRS': False,
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+            ],
+            'loaders':[(
+               'django.template.loaders.cached.Loader', [
+                   'django_cotton.cotton_loader.Loader',
+                  'django.template.loaders.filesystem.Loader',
+                  'django.template.loaders.app_directories.Loader',
+                  'django_components.template_loader.Loader',
+               ]
+            )],
+            'builtins': [
+                'django_cotton.templatetags.cotton',
+                'django_components.templatetags.component_tags',
             ],
         },
     },
@@ -75,8 +106,15 @@ WSGI_APPLICATION = 'toratora.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'sumatorato',
+        'USER': 'sumatorato_owner',
+        'PASSWORD': 'D3fLZxYSqCU2',
+        'HOST': 'ep-misty-base-a1kpyccf.ap-southeast-1.aws.neon.tech',
+        'PORT': '5432',
+        'OPTIONS': {
+            'sslmode': 'require',
+        },
     }
 }
 
@@ -115,9 +153,66 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = 'public/'
+STATICFILES_DIRS = [
+    BASE_DIR / "components",
+    BASE_DIR / "static",
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+## Tailwind Settings
+from shutil import which
+NPM_BIN_PATH = which("npm")
+
+TAILWIND_APP_NAME = 'theme'
+
+INTERNAL_IPS = [
+    "127.0.0.1",
+]
+
+## Unfold Admin Settings
+from django.templatetags.static import static
+from django.urls import reverse_lazy
+from django.utils.translation import gettext_lazy as _
+
+
+UNFOLD = {
+    "SITE_TITLE": "Toratora Admin",
+    "SITE_HEADER": "Toratora Databases",
+    "COLORS": {
+        "primary": {
+            "50": "#f2f7fb",
+            "100": "#e7f0f8",
+            "200": "#d3e2f2",
+            "300": "#b9cfe8",
+            "400": "#9cb6dd",
+            "500": "#839dd1",
+            "600": "#6a7fc1",
+            "700": "#6374ae",
+            "800": "#4a5989",
+            "900": "#414e6e",
+            "950": "#262c40",
+        },
+    },
+     "SIDEBAR": {
+         "show_search": True,
+
+     },
+     
+      "SITE_ICON": {
+        "light": lambda request: static("maskot/tiger.png"),  # light mode
+        "dark": lambda request: static("maskot/tiger.png"),  # dark mode
+    },
+     "SITE_FAVICONS": [
+        {
+            "rel": "icon",
+            "sizes": "32x32",
+            "type": "image/svg+xml",
+            "href": lambda request: static("maskot/tiger.png"),
+        },
+    ],
+}
