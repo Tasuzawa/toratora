@@ -7,19 +7,13 @@
     </c-example.preline.announcement.2>
     <c-example.anime.layout.1.base >
         <c-slot name="content">
-            <c-example.anime.section.1 title="Update : Senin">
-                <c-example.anime.animeitem.1 />
-                <c-example.anime.animeitem.1 />
-                <c-example.anime.animeitem.1 />
-                <c-example.anime.animeitem.1 />
-                <c-example.anime.animeitem.1 />
-                <c-example.anime.animeitem.1 />
-            </c-example.anime.section.1>
             <c-example.anime.section.1 title="Complete">
-                <c-example.anime.animeitem.1 />
-                <c-example.anime.animeitem.1 />
-                <c-example.anime.animeitem.1 />
-                <c-example.anime.animeitem.1 />
+                {% for title,data in complete_anime.items %}
+                <c-example.anime.animeitem.1 
+                title="{{title}}" 
+                thumbnail="{{data.thumbnail}}" 
+                synopsis="{{data.synopsis}}"/>
+                {% endfor %}
             </c-example.anime.section.1>
         </c-slot>
         <c-slot name="sidebar">
