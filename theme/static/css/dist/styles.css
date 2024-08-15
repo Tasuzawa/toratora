@@ -900,6 +900,11 @@ select {
   margin-bottom: 2rem;
 }
 
+.mx-2 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
 .mb-1 {
   margin-bottom: 0.25rem;
 }
@@ -954,6 +959,14 @@ select {
 
 .mb-4 {
   margin-bottom: 1rem;
+}
+
+.me-5 {
+  margin-inline-end: 1.25rem;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
 }
 
 .block {
@@ -1044,6 +1057,10 @@ select {
   height: 1px;
 }
 
+.h-5 {
+  height: 1.25rem;
+}
+
 .max-h-\[75vh\] {
   max-height: 75vh;
 }
@@ -1094,6 +1111,10 @@ select {
 
 .w-\[120px\] {
   width: 120px;
+}
+
+.w-px {
+  width: 1px;
 }
 
 .max-w-\[300px\] {
@@ -1366,12 +1387,20 @@ select {
   border-width: 0px;
 }
 
+.border-2 {
+  border-width: 2px;
+}
+
 .border-b {
   border-bottom-width: 1px;
 }
 
 .border-s {
   border-inline-start-width: 1px;
+}
+
+.border-e {
+  border-inline-end-width: 1px;
 }
 
 .border-solid {
@@ -1399,6 +1428,15 @@ select {
 .border-neutral-700 {
   --tw-border-opacity: 1;
   border-color: rgb(64 64 64 / var(--tw-border-opacity));
+}
+
+.border-white {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+
+.border-white\/30 {
+  border-color: rgb(255 255 255 / 0.3);
 }
 
 .border-t-transparent {
@@ -1464,6 +1502,18 @@ select {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
+.from-purple-600 {
+  --tw-gradient-from: #9333ea var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(147 51 234 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.from-blue-700 {
+  --tw-gradient-from: #1d4ed8 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(29 78 216 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
 .from-10\% {
   --tw-gradient-from-position: 10%;
 }
@@ -1479,6 +1529,14 @@ select {
 
 .to-emerald-100 {
   --tw-gradient-to: #d1fae5 var(--tw-gradient-to-position);
+}
+
+.to-blue-400 {
+  --tw-gradient-to: #60a5fa var(--tw-gradient-to-position);
+}
+
+.to-\[\#B06AB3\] {
+  --tw-gradient-to: #B06AB3 var(--tw-gradient-to-position);
 }
 
 .to-90\% {
@@ -1589,6 +1647,16 @@ select {
   padding-bottom: 2rem;
 }
 
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.py-12 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
 .ps-7 {
   padding-inline-start: 1.75rem;
 }
@@ -1637,6 +1705,10 @@ select {
   font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 }
 
+.font-sans {
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -1674,6 +1746,11 @@ select {
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
+}
+
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 .font-bold {
@@ -1934,6 +2011,10 @@ select {
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
 
+.hover\:border-white\/70:hover {
+  border-color: rgb(255 255 255 / 0.7);
+}
+
 .hover\:bg-blue-700:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(29 78 216 / var(--tw-bg-opacity));
@@ -1973,6 +2054,11 @@ select {
   background-color: rgb(255 237 213 / var(--tw-bg-opacity));
 }
 
+.hover\:bg-slate-100:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(241 245 249 / var(--tw-bg-opacity));
+}
+
 .hover\:text-gray-800:hover {
   --tw-text-opacity: 1;
   color: rgb(31 41 55 / var(--tw-text-opacity));
@@ -1983,9 +2069,17 @@ select {
   color: rgb(229 231 235 / var(--tw-text-opacity));
 }
 
+.hover\:text-white\/70:hover {
+  color: rgb(255 255 255 / 0.7);
+}
+
 .focus\:border-blue-500:focus {
   --tw-border-opacity: 1;
   border-color: rgb(59 130 246 / var(--tw-border-opacity));
+}
+
+.focus\:border-white\/70:focus {
+  border-color: rgb(255 255 255 / 0.7);
 }
 
 .focus\:bg-gray-100:focus {
@@ -2010,6 +2104,10 @@ select {
 .focus\:text-gray-200:focus {
   --tw-text-opacity: 1;
   color: rgb(229 231 235 / var(--tw-text-opacity));
+}
+
+.focus\:text-white\/70:focus {
+  color: rgb(255 255 255 / 0.7);
 }
 
 .focus\:opacity-80:focus {
@@ -2187,6 +2285,11 @@ select {
     font-size: 1.875rem;
     line-height: 2.25rem;
   }
+
+  .sm\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
 }
 
 @media (min-width: 768px) {
@@ -2196,6 +2299,10 @@ select {
 
   .md\:top-0 {
     top: 0px;
+  }
+
+  .md\:order-2 {
+    order: 2;
   }
 
   .md\:\!mx-\[10px\] {
@@ -2271,6 +2378,10 @@ select {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .md\:flex-row {
     flex-direction: row;
   }
@@ -2342,6 +2453,10 @@ select {
 
   .md\:ps-0 {
     padding-inline-start: 0px;
+  }
+
+  .md\:text-start {
+    text-align: start;
   }
 
   .md\:shadow-md {
