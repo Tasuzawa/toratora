@@ -40,6 +40,7 @@ module.exports = {
          * and make sure the pattern below matches your project structure.
          */
         // '../../**/*.py'
+        'node_modules/preline/dist/*.js',
     ],
     theme: {
         extend: {},
@@ -53,5 +54,6 @@ module.exports = {
         require('@tailwindcss/forms'),
         require('@tailwindcss/typography'),
         require('@tailwindcss/aspect-ratio'),
+        require('preline/plugin'),
     ],
 }
