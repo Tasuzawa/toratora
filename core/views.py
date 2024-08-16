@@ -1,6 +1,7 @@
 from django.shortcuts import render
 
 # Create your views here.
+
 def main(request):
     render_template = 'main.html'
     
@@ -69,3 +70,8 @@ def animeDetail(request):
         'episode_anime': episode_anime,
     }
     return render(request,render_template,context)
+
+def animePlayEpisode(request):
+    render_template = 'animePlayEpisode.html'
+    
+    return render(request,render_template)
