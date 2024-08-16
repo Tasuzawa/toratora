@@ -1766,6 +1766,11 @@ select {
   color: rgb(250 204 21 / var(--tw-text-opacity));
 }
 
+.text-gray-300 {
+  --tw-text-opacity: 1;
+  color: rgb(209 213 219 / var(--tw-text-opacity));
+}
+
 .opacity-0 {
   opacity: 0;
 }
@@ -2684,6 +2689,11 @@ select {
 
   .lg\:pt-20 {
     padding-top: 5rem;
+  }
+
+  .lg\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 }
 
