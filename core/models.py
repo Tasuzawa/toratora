@@ -50,7 +50,7 @@ class Anime(models.Model):
         ('completed', 'Completed'),
     ]
     status = models.CharField(max_length=20, choices=STATUS_CHOICES)
-    slug = models.SlugField(unique=True, blank=True, null=True)
+    slug = models.SlugField(unique=True, blank=True, null=True,editable=False)
     
     def save(self, *args, **kwargs):
         if not self.slug:
