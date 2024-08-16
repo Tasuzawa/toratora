@@ -2,4 +2,20 @@
 
 <c-layout.playvideo.main>
     <c-example.anime.playvideo.optimasi video="{% static 'video/test/anime.mp4' %}"/>
+    <c-example.anime.layout.1.base >
+        <c-slot name="content">
+            <c-example.anime.section.1 title="Episode">
+                {% for title,data in episode_anime.items %}
+                <c-example.anime.animeitem.1 
+                url="{% url 'animedetail' %}"
+                title="{{title}}" 
+                thumbnail="{{data.thumbnail}}" 
+                synopsis="{{data.synopsis}}"/>
+                {% endfor %}
+            </c-example.anime.section.1>
+        </c-slot>
+        <c-slot name="sidebar">
+            <c-example.anime.sidebar.1 />
+        </c-slot>
+    </c-example.anime.layout.1.base>
 </c-layout.playvideo.main>
