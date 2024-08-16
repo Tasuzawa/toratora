@@ -1,5 +1,7 @@
 import uuid
 from django.db import models
+from django.utils.text import slugify
+
 from core.utils import *
 
 
@@ -33,13 +35,31 @@ class Penulis(models.Model):
 class Anime(models.Model):
     id_anime = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     judul = models.CharField(max_length=255)
-    judul_asli = models.CharField(max_length=255)
-    deskripsi = models.TextField()
+    judul_jepang = models.CharField(max_length=255)
+    synopsis = models.TextField()
+    rating = models.DecimalField(max_digits=3, decimal_places=1, validators=[MinValueValidator(0), MaxValueValidator(10)])
+    durasi = models.DurationField(null=True, blank=True)
+    episode = models.PositiveIntegerField()
     cover = models.ImageField(upload_to=anime_cover_path)
     tanggal_rilis = models.DateField()
     genres = models.ManyToManyField(Genre)
     studio = models.ForeignKey(Studio, on_delete=models.CASCADE)
     penulis = models.ForeignKey(Penulis,on_delete=models.CASCADE)
+    STATUS_CHOICES = [
+        ('ongoing', 'Ongoing'),
+        ('completed', 'Completed'),
+    ]
+    status = models.CharField(max_length=20, choices=STATUS_CHOICES)
+    slug = models.SlugField(unique=True, blank=True, null=True)
+    
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.judul)
+        super().save(*args, **kwargs)
+    
+    
+    def average_rating(self):
+        pass
     
     def __str__(self):
         return self.judul
