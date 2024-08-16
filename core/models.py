@@ -48,6 +48,7 @@ class Anime(models.Model):
     STATUS_CHOICES = [
         ('ongoing', 'Ongoing'),
         ('completed', 'Completed'),
+        ('hiatus', 'Hiatus'),
     ]
     status = models.CharField(max_length=20, choices=STATUS_CHOICES)
     slug = models.SlugField(unique=True, blank=True, null=True,editable=False)
