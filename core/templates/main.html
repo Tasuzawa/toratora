@@ -10,6 +10,7 @@
             <c-example.anime.section.1 title="Complete">
                 {% for title,data in complete_anime.items %}
                 <c-example.anime.animeitem.1 
+                url="{% url 'animedetail' %}"
                 title="{{title}}" 
                 thumbnail="{{data.thumbnail}}" 
                 synopsis="{{data.synopsis}}"/>

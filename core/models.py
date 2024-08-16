@@ -33,6 +33,7 @@ class Penulis(models.Model):
 class Anime(models.Model):
     id_anime = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     judul = models.CharField(max_length=255)
+    judul_asli = models.CharField(max_length=255)
     deskripsi = models.TextField()
     cover = models.ImageField(upload_to=anime_cover_path)
     tanggal_rilis = models.DateField()
