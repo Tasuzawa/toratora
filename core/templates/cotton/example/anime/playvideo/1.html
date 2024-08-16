@@ -1,6 +1,6 @@
 {% load static %}
 
-<div class="w-full mx-auto bg-black p-4 rounded-2xl my-4 flex flex-col justify-center items-center">
+<div class="w-full mx-auto bg-black p-4 rounded-lg my-4 flex flex-col justify-center items-center">
 
   {# untuk ukuran xl #}
   <div class="mx-auto bg-black p-2 rounded-xl hidden xl:block">
@@ -112,12 +112,15 @@
     </video>
   </div>
 
-  <div class="container mx-auto">
-    <div class="hidden xl:block bg-blue-500 p-4">Hanya terlihat pada layar extra large (xl)</div>
-    <div class="hidden lg:block xl:hidden bg-green-500 p-4">Hanya terlihat pada layar large (lg)</div>
-    <div class="hidden md:block lg:hidden bg-yellow-500 p-4">Hanya terlihat pada layar medium (md)</div>
-    <div class="hidden sm:block md:hidden bg-purple-500 p-4">Hanya terlihat pada layar small (sm)</div>
-    <div class="hidden xs:block sm:hidden bg-pink-500 p-4">Hanya terlihat pada layar extra small (xs)</div>
+  <div class="container mx-auto flex flex-col justify-center items-center">
+    <h2 class="text-center text-gray-400 text-sm font-semibold mb-4">Resolusi</h2>
+    <div class="flex justify-center space-x-2">
+      <button class="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300" data-resolusi="360p">360p</button>
+      <button class="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300" data-resolusi="480p">480p</button>
+      <button class="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300" data-resolusi="720p">720p</button>
+      <button class="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300" data-resolusi="1080p">1080p</button>
+      <button class="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300" data-resolusi="4K">4K</button>
+    </div>
   </div>
 
 </div>
