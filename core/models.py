@@ -37,9 +37,9 @@ class Anime(models.Model):
     judul = models.CharField(max_length=255)
     judul_jepang = models.CharField(max_length=255)
     synopsis = models.TextField()
-    rating = models.DecimalField(max_digits=3, decimal_places=1, validators=[MinValueValidator(0), MaxValueValidator(10)])
+    rating = models.DecimalField(max_digits=3, decimal_places=1)
     durasi = models.DurationField(null=True, blank=True)
-    episode = models.PositiveIntegerField()
+    jumlah_episode = models.CharField(max_length=50)
     cover = models.ImageField(upload_to=anime_cover_path)
     tanggal_rilis = models.DateField()
     genres = models.ManyToManyField(Genre)
@@ -65,7 +65,10 @@ class Anime(models.Model):
         return self.judul
     
     
+    
+    
 class Episode(models.Model):
+    id_episode = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     anime = models.ForeignKey(Anime, on_delete=models.CASCADE)
     nomor_episode = models.PositiveIntegerField()
     judul_episode = models.CharField(max_length=255)
