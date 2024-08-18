@@ -1,0 +1,4 @@
+Black Ungu (Cocok untuk Background) : #35374B rgb(53, 55, 75),
+Black Blue (cocok untuk tulisan) : #344955 rgb(52, 73, 85),
+Abu-abu (cocok untuk pelapis) : #50727B rgb(80, 114, 123),
+Hijau Tua : #78A083 rgb(120, 160, 131)
