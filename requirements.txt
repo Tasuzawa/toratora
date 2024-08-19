@@ -7,7 +7,7 @@ chardet==5.2.0
 charset-normalizer==3.3.2
 click==8.1.7
 cookiecutter==2.6.0
-Django==5.1
+Django==5.0
 django-cotton==0.9.25
 django-tailwind==3.8.0
 django-unfold==0.35.0
