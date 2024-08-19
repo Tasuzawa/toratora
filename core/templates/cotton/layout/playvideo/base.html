@@ -11,7 +11,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
         <c-libs.public.favicon />
-
+		<link rel="stylesheet" href="{% static 'plyr/dist/plyr.css' %}"/>
 		<c-libs.public.videojs.css />
 		<c-libs.public.plyr.css />
         {% component_css_dependencies %}
@@ -30,5 +30,6 @@
 		<c-libs.public.lucide />
 		<c-libs.public.videojs.js />
 		<c-libs.public.plyr.js />
+		<script src="{% static 'plyr/dist/plyr.js' %}"></script>
 	</body>
 </html>
