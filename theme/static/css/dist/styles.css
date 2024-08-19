@@ -1649,6 +1649,16 @@ select {
   padding-bottom: 7px;
 }
 
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
 .pb-8 {
   padding-bottom: 2rem;
 }
