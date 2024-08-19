@@ -7,4 +7,7 @@
     .menu-link {
         @apply text-[16px] text-slate-900 hover:border-b hover:text-letto-600 hover:border-letto-400 focus:outline-none focus:rounded-lg focus:bg-letto-600 focus:text-buttermilk-50;
       }
+    ::selection {
+        @apply bg-letto-500 text-white;
+      }
 }
