@@ -798,9 +798,9 @@ select {
 .menu-link:hover {
   border-bottom-width: 1px;
   --tw-border-opacity: 1;
-  border-color: rgb(235 129 133 / var(--tw-border-opacity));
+  border-color: rgb(224 83 92 / var(--tw-border-opacity));
   --tw-text-opacity: 1;
-  color: rgb(203 51 68 / var(--tw-text-opacity));
+  color: rgb(224 83 92 / var(--tw-text-opacity));
 }
 
 .menu-link:focus {
@@ -1205,22 +1205,8 @@ select {
   cursor: pointer;
 }
 
-.select-text {
-  -webkit-user-select: text;
-     -moz-user-select: text;
-          user-select: text;
-}
-
 .resize {
   resize: both;
-}
-
-.snap-y {
-  scroll-snap-type: y var(--tw-scroll-snap-strictness);
-}
-
-.snap-center {
-  scroll-snap-align: center;
 }
 
 .grid-cols-1 {
@@ -1350,10 +1336,6 @@ select {
   margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
 }
 
-.overflow-auto {
-  overflow: auto;
-}
-
 .overflow-hidden {
   overflow: hidden;
 }
@@ -1364,10 +1346,6 @@ select {
 
 .overflow-y-auto {
   overflow-y: auto;
-}
-
-.overflow-y-scroll {
-  overflow-y: scroll;
 }
 
 .truncate {
@@ -1526,6 +1504,11 @@ select {
   background-color: rgb(17 24 39 / var(--tw-bg-opacity));
 }
 
+.bg-slate-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(71 85 105 / var(--tw-bg-opacity));
+}
+
 .bg-transparent {
   background-color: transparent;
 }
@@ -1609,6 +1592,11 @@ select {
   padding-right: 1rem;
 }
 
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
 .px-6 {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
@@ -1647,16 +1635,6 @@ select {
 .py-\[7px\] {
   padding-top: 7px;
   padding-bottom: 7px;
-}
-
-.px-8 {
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-
-.px-5 {
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
 }
 
 .pb-8 {
@@ -2069,22 +2047,6 @@ select {
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
 
-.first\:pl-8:first-child {
-  padding-left: 2rem;
-}
-
-.first\:pt-8:first-child {
-  padding-top: 2rem;
-}
-
-.last\:pr-8:last-child {
-  padding-right: 2rem;
-}
-
-.last\:pb-8:last-child {
-  padding-bottom: 2rem;
-}
-
 .hover\:border-white\/70:hover {
   border-color: rgb(255 255 255 / 0.7);
 }
@@ -2104,18 +2066,13 @@ select {
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
 }
 
-.hover\:bg-vistablue-200:hover {
+.hover\:bg-vistablue-100:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(186 224 204 / var(--tw-bg-opacity));
+  background-color: rgb(219 240 228 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-white\/10:hover {
   background-color: rgb(255 255 255 / 0.1);
-}
-
-.hover\:bg-vistablue-100:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(219 240 228 / var(--tw-bg-opacity));
 }
 
 .hover\:text-gray-200:hover {
@@ -2521,6 +2478,11 @@ select {
   .md\:bg-gray-300 {
     --tw-bg-opacity: 1;
     background-color: rgb(209 213 219 / var(--tw-bg-opacity));
+  }
+
+  .md\:bg-slate-600 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(71 85 105 / var(--tw-bg-opacity));
   }
 
   .md\:bg-white {
