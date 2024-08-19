@@ -28,6 +28,7 @@
   },
   "dependencies": {
     "lucide": "^0.427.0",
+    "plyr": "^3.7.8",
     "preline": "^2.4.1"
   }
 }
