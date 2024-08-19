@@ -1,6 +1,6 @@
 {% load component_tags %}
 {% load static tailwind_tags %}
-
+{% load static %}
 
 
 <!DOCTYPE html>
@@ -11,6 +11,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
         <c-libs.public.favicon />
+
 		<c-libs.public.videojs.css />
 		<c-libs.public.plyr.css />
         {% component_css_dependencies %}
@@ -24,6 +25,7 @@
 		</div>
 		{{footer}}
         {% component_js_dependencies %}
+		<c-libs.public.plyr.js />
 		<c-libs.public.preline />
 		<c-libs.public.lucide />
 		<c-libs.public.videojs.js />
