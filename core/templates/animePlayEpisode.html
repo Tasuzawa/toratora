@@ -20,11 +20,14 @@ srclang="id"
             </c-slot>
 
             {# comment card #}
-            <c-example.anime.comment.comment/>
-            <c-example.anime.comment.comment/>
-            <c-example.anime.comment.comment/>
-            <c-example.anime.comment.comment/>
-            <c-example.anime.comment.comment/>
+            {% for comment in comments %}
+                <c-example.anime.comment.comment
+                sender="{{comment.sender}}"
+                date="{{comment.date}}"
+                comment="{{comment.comment}}"
+                />
+            {% endfor %}
+            
             {# endcomment #}
         </c-example.anime.section.comment>
         

@@ -1174,6 +1174,22 @@ select {
   width: 1px;
 }
 
+.w-\[25\] {
+  width: 25;
+}
+
+.w-\[15px\] {
+  width: 15px;
+}
+
+.w-\[24px\] {
+  width: 24px;
+}
+
+.w-\[18px\] {
+  width: 18px;
+}
+
 .max-w-\[300px\] {
   max-width: 300px;
 }
@@ -2234,6 +2250,14 @@ select {
   background-color: rgb(255 255 255 / 0.1);
 }
 
+.hover\:fill-blue-400:hover {
+  fill: #60a5fa;
+}
+
+.hover\:fill-vistablue-400:hover {
+  fill: #5bac89;
+}
+
 .hover\:text-gray-200:hover {
   --tw-text-opacity: 1;
   color: rgb(229 231 235 / var(--tw-text-opacity));
@@ -2251,6 +2275,21 @@ select {
 
 .hover\:text-white\/70:hover {
   color: rgb(255 255 255 / 0.7);
+}
+
+.hover\:text-blue-500:hover {
+  --tw-text-opacity: 1;
+  color: rgb(59 130 246 / var(--tw-text-opacity));
+}
+
+.hover\:text-blue-400:hover {
+  --tw-text-opacity: 1;
+  color: rgb(96 165 250 / var(--tw-text-opacity));
+}
+
+.hover\:text-vistablue-400:hover {
+  --tw-text-opacity: 1;
+  color: rgb(91 172 137 / var(--tw-text-opacity));
 }
 
 .focus\:z-10:focus {
@@ -2295,6 +2334,14 @@ select {
   background-color: rgb(255 255 255 / 0.1);
 }
 
+.focus\:fill-blue-400:focus {
+  fill: #60a5fa;
+}
+
+.focus\:fill-vistablue-400:focus {
+  fill: #5bac89;
+}
+
 .focus\:text-gray-200:focus {
   --tw-text-opacity: 1;
   color: rgb(229 231 235 / var(--tw-text-opacity));
@@ -2307,6 +2354,16 @@ select {
 
 .focus\:text-white\/70:focus {
   color: rgb(255 255 255 / 0.7);
+}
+
+.focus\:text-blue-400:focus {
+  --tw-text-opacity: 1;
+  color: rgb(96 165 250 / var(--tw-text-opacity));
+}
+
+.focus\:text-vistablue-400:focus {
+  --tw-text-opacity: 1;
+  color: rgb(91 172 137 / var(--tw-text-opacity));
 }
 
 .focus\:opacity-80:focus {
