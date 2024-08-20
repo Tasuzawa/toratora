@@ -51,7 +51,20 @@ module.exports = {
             xl: '1280px',
             '2xl': '1536px',
           },
-        extend: {},
+        extend: {
+            scrollbar: {
+                comment: {
+                    width: '3px',
+                    height: '3px',
+                    borderRadius: '3px',
+                    backgroundColor: 'transparent',
+                    thumb: {
+                        backgroundColor: '#ccc',
+                        borderRadius: '3px',
+                    },
+                },
+            },
+        },
         colors:{
             transparent: 'transparent',
             current: 'currentColor',

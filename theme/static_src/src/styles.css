@@ -10,4 +10,18 @@
     ::selection {
         @apply bg-letto-500 text-white;
       }
+};
+
+/* Jika perlu override gaya secara global */
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 3px;
 }
