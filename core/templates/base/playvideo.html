@@ -1,0 +1,32 @@
+{% load component_tags %}
+{% load static tailwind_tags %}
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="id" theme="playvideo">
+	<head>
+    <title>Toratora</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <c-libs.public.favicon />
+		<c-libs.public.plyr.css />
+        {% component_css_dependencies %}
+		{% tailwind_css %}
+        {% block extra_head %}{% endblock extra_head %}
+	</head>
+
+	<body class="bg-vistablue-300 leading-normal tracking-normal">
+        {% include 'cotton/layout/default/header.html' %}
+		<div class="lg:container mx-auto">
+            {% block content %}{% endblock content %}
+		</div>
+        {% include 'cotton/layout/default/footer.html' %}
+        {% block extra_bottom %}{% endblock extra_bottom %}
+        {% component_js_dependencies %}
+		<c-libs.public.preline />
+		<c-libs.public.lucide />
+		<c-libs.public.plyr.js />
+	</body>
+</html>
