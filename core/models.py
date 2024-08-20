@@ -77,6 +77,7 @@ class Episode(models.Model):
     durasi = models.DurationField(null=True, blank=True)
     deskripsi = models.TextField(null=True, blank=True)
     video_url_360p = models.URLField(null=True, blank=True)
+    video_url_480p = models.URLField(null=True, blank=True)
     video_url_720p = models.URLField(null=True, blank=True)
     video_url_1080p = models.URLField(null=True, blank=True)
     thumbnail = models.ImageField(upload_to=episode_thumbnail_path)

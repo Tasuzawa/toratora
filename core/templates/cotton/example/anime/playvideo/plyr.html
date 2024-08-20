@@ -7,10 +7,17 @@
 
   <div class="mx-auto bg-black p-2 rounded-xl">
     <div class="container">
-      <video controls crossorigin playsinline poster="{% static 'maskot/darikakek.png' %}">
-         <source src="{{video}}" type="video/mp4" size="576">
-          <source src="{{video}}" type="video/mp4" size="720">
-          <source src="{{video}}" type="video/mp4" size="1080">
+      <video
+      class="rounded-lg" 
+      style="--plyr-color-main: #e0535c;" 
+      controls 
+      crossorigin 
+      playsinline 
+      poster="{% static 'maskot/darikakek.png' %}">
+         <source src="{{video}}" type="video/mp4" size="360">
+         <source src="{{video}}" type="video/mp4" size="480">
+         <source src="{{video}}" type="video/mp4" size="720">
+         <source src="{{video}}" type="video/mp4" size="1080">
     
           <!-- Caption files -->
           <track kind="captions" label="{{label}}" srclang="{{srclang}}" src="{{caption}}"
