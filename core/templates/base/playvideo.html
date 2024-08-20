@@ -18,11 +18,11 @@
 	</head>
 
 	<body class="bg-vistablue-300 leading-normal tracking-normal">
-        {% include 'cotton/layout/default/header.html' %}
+        <c-layout.default.header />
 		<div class="lg:container mx-auto">
             {% block content %}{% endblock content %}
 		</div>
-        {% include 'cotton/layout/default/footer.html' %}
+        <c-layout.default.footer />
         {% block extra_bottom %}{% endblock extra_bottom %}
         {% component_js_dependencies %}
 		<c-libs.public.preline />
