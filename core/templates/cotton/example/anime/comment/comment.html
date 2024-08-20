@@ -20,9 +20,12 @@
     </div>
     <div class="w-full justify-between items-center inline-flex">
         <div class="justify-start items-center gap-4 flex">
-            <div class="justify-start items-center gap-1.5 flex">
-                <button type="button" class="text-slate-500 text-sm font-normal leading-snug hover:text-vistablue-400 hover:fill-vistablue-400 focus:outline-none focus:text-vistablue-400 focus:fill-vistablue-400">
+            <div class="hs-tooltip justify-start items-center gap-1.5 flex">
+                <button type="button" class="hs-tooltip-toggle text-slate-500 text-sm font-normal leading-snug hover:text-vistablue-400 hover:fill-vistablue-400 focus:outline-none focus:text-vistablue-400 focus:fill-vistablue-400">
                    <i class="w-[18px] h-auto" data-lucide="thumbs-up" width="24" heigth="24"/>
+                   <span class="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 transition-opacity inline-block absolute invisible z-10 py-1 px-2 bg-gray-900 text-xs font-medium text-white rounded shadow-sm dark:bg-neutral-700" role="tooltip">
+                    Like
+                  </span>
                 </button>
             </div>
         </div>
