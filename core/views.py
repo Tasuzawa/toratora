@@ -110,3 +110,12 @@ def animePlayEpisode(request):
         'comments': comments,
     }
     return render(request,render_template,context)
+
+
+def animeJadwalRilis(request):
+    render_template = 'animeJadwalRilis.html'
+    
+    context = {
+        'complete_anime':complete_anime,
+    }
+    return render(request,render_template,context)

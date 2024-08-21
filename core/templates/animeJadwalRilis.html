@@ -1,0 +1,65 @@
+{% extends 'base/default.html' %}
+
+{% block content %}
+
+<c-example.anime.layout.1.base >
+    <c-slot name="content">
+        <c-example.anime.section.jadwalrilis title="jadwal rilis">
+
+            <c-libs.anime.tabs.jadwalrilis.base>
+                <c-slot name="nav_tabs">
+                    <c-libs.anime.tabs.jadwalrilis.nav statu="" name="Senin" status="active" select="true"/>
+                    <c-libs.anime.tabs.jadwalrilis.nav name="Selasa" select="false"/>
+                    <c-libs.anime.tabs.jadwalrilis.nav name="Rabu" select="false"/>
+                    <c-libs.anime.tabs.jadwalrilis.nav name="Kamis" select="false"/>
+                    <c-libs.anime.tabs.jadwalrilis.nav name="Jumat" select="false"/>
+                    <c-libs.anime.tabs.jadwalrilis.nav name="Sabtu" select="false"/>
+                    <c-libs.anime.tabs.jadwalrilis.nav name="Minggu" select="false"/>
+                </c-slot>
+
+                <c-slot name="nav_content">
+                    <c-libs.anime.tabs.jadwalrilis.content name="Senin">
+                        <c-slot name="content">
+                            Kontent Anime Hari Senin
+                        </c-slot>
+                    </c-libs.anime.tabs.jadwalrilis.content>
+                    <c-libs.anime.tabs.jadwalrilis.content class="hidden" name="Selasa">
+                        <c-slot name="content">
+                            Kontent Anime Hari Selasa
+                        </c-slot>
+                    </c-libs.anime.tabs.jadwalrilis.content>
+                    <c-libs.anime.tabs.jadwalrilis.content class="hidden" name="Rabu">
+                        <c-slot name="content">
+                            Kontent Anime Hari Rabu
+                        </c-slot>
+                    </c-libs.anime.tabs.jadwalrilis.content>
+                    <c-libs.anime.tabs.jadwalrilis.content class="hidden" name="Kamis">
+                        <c-slot name="content">
+                            Kontent Anime Hari Kamis
+                        </c-slot>
+                    </c-libs.anime.tabs.jadwalrilis.content>
+                    <c-libs.anime.tabs.jadwalrilis.content class="hidden" name="Jumat">
+                        <c-slot name="content">
+                            Kontent Anime Hari Jumat
+                        </c-slot>
+                    </c-libs.anime.tabs.jadwalrilis.content>
+                    <c-libs.anime.tabs.jadwalrilis.content class="hidden" name="Sabtu">
+                        <c-slot name="content">
+                            Kontent Anime Hari Sabtu
+                        </c-slot>
+                    </c-libs.anime.tabs.jadwalrilis.content>
+                    <c-libs.anime.tabs.jadwalrilis.content class="hidden" name="Minggu">
+                        <c-slot name="content">
+                            Kontent Anime Hari Minggu
+                        </c-slot>
+                    </c-libs.anime.tabs.jadwalrilis.content>
+                </c-slot>
+            </c-libs.anime.tabs.jadwalrilis.base>
+
+        </c-example.anime.section.jadwalrilis>
+    </c-slot>
+    <c-slot name="sidebar">
+        <c-example.anime.sidebar.1 />
+    </c-slot>
+</c-example.anime.layout.1.base>
+{% endblock %}
