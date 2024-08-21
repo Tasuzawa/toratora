@@ -12,7 +12,7 @@ def generate_random_anime_rilis_data(jumlah_data_anime_rilis):
             'id': str(random.randint(100, 999)),
             'day': random.choice(hari),
             'title': fake.sentence(nb_words=6),
-            'thumbnail': 'https://via.placeholder.com/300x400',  # Ganti dengan placeholder image
+            'thumbnail': 'https://doroni.me/images/anime/633d819f00981.jpg.webp',  # Ganti dengan placeholder image
             'synopsis': fake.paragraph(nb_sentences=3),
         }
         anime_data.append(anime)
@@ -28,7 +28,7 @@ def generate_random_anime_complete_data(jumlah_data_anime_complete):
         anime = {
             'id': str(random.randint(100, 999)),
             'title': fake.sentence(nb_words=10),
-            'thumbnail': 'https://via.placeholder.com/300x400',  # Ganti dengan placeholder image
+            'thumbnail': 'https://doroni.me/images/anime/633d819f00981.jpg.webp',  # Ganti dengan placeholder image
             'synopsis': fake.paragraph(nb_sentences=3),
         }
         anime_data_complete.append(anime)
@@ -44,7 +44,7 @@ def generate_random_anime_episode_data(jumlah_data_anime_episode):
         anime = {
             'id': str(random.randint(100, 999)),
             'title': fake.sentence(nb_words=7),
-            'thumbnail': 'https://via.placeholder.com/300x400',  # Ganti dengan placeholder image
+            'thumbnail': 'https://doroni.me/images/anime/633d819f00981.jpg.webp',  # Ganti dengan placeholder image
             'synopsis': fake.paragraph(nb_sentences=3),
         }
         anime_data_episode.append(anime)
