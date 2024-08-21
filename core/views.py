@@ -49,3 +49,20 @@ def animeJadwalRilis(request):
         'jadwal_minggu': jadwal_minggu,
     }
     return render(request,render_template,context)
+
+def animeDaftarList(request):
+    render_template = 'animeDaftarList.html'
+    
+    by_a = [anime for anime in anime_by_string if anime['list_by'] == 'A' ]
+    by_b = [anime for anime in anime_by_string if anime['list_by'] == 'B' ]
+    by_c = [anime for anime in anime_by_string if anime['list_by'] == 'C' ]
+    by_d = [anime for anime in anime_by_string if anime['list_by'] == 'D' ]
+    
+    
+    context = {
+        'by_a' : by_a,
+        'by_b' : by_b,
+        'by_c' : by_c,
+        'by_d' : by_d,
+    }
+    return render(request,render_template,context)
