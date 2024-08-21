@@ -70,7 +70,7 @@ def generate_random_reaksi(jumlah_reaksi):
     return data_reaksi
 
 
-jumlah_reaksi = 25
+jumlah_reaksi = 15
 jumlah_data_anime_episode = 12
 jumlah_data_anime_complete = 7
 jumlah_data_anime_rilis = 15
