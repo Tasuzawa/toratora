@@ -20,11 +20,13 @@ srclang="id"
             </c-slot>
 
             {# comment card #}
-            {% for comment in comments %}
+            {% for comment in reaksi %}
                 <c-example.anime.comment.comment
                 sender="{{comment.sender}}"
                 date="{{comment.date}}"
                 comment="{{comment.comment}}"
+                like="{{comment.like}}"
+                dislike="{{comment.dislike}}"
                 />
             {% endfor %}
             
@@ -34,10 +36,10 @@ srclang="id"
         <c-example.anime.animedetail.playvideo/>
         
         <c-example.anime.section.playvideo title="Episode">
-                {% for title,data in episode_anime.items %}
+                {% for data in anime_episode %}
                 <c-example.anime.animeitem.1 
                 url="{% url 'animedetail' %}"
-                title="{{title}}" 
+                title="{{data.title}}" 
                 thumbnail="{{data.thumbnail}}" 
                 synopsis="{{data.synopsis}}"/>
                 {% endfor %}

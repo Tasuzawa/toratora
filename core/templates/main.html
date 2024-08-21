@@ -10,12 +10,12 @@
 <c-example.anime.layout.1.base >
     <c-slot name="content">
         <c-example.anime.section.1 title="Complete">
-            {% for title,data in complete_anime.items %}
+            {% for anime in anime_complete %}
             <c-example.anime.animeitem.1 
-            url="{% url 'animeplay' %}"
-            title="{{title}}" 
-            thumbnail="{{data.thumbnail}}" 
-            synopsis="{{data.synopsis}}"/>
+            url="{% url 'animedetail' %}"
+            title="{{anime.title}}" 
+            thumbnail="{{anime.thumbnail}}" 
+            synopsis="{{anime.synopsis}}"/>
             {% endfor %}
         </c-example.anime.section.1>
     </c-slot>

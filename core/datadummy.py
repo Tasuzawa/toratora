@@ -1,98 +1,80 @@
-episode_anime = {
-        'Kage no Jitsuryokusha ni Naritakute!': {
-            'thumbnail':'https://doroni.me/images/anime/633d819f00981.jpg.webp',
-            'synopsis': 'Makoto Misumi hanyalah seorang siswa sekolah menengah biasa ketika dia, karena keadaan tertentu yang dihadapi orang tuanya, dipanggil ke dunia lain untuk menjadi "pahlawan."',
-            },
-        'Tsukimichi Moonlit Fantasy Season 2': {
-            'thumbnail':'https://doroni.me/images/anime/659c53dd27cf2.jpg.webp',
-            'synopsis': 'Setelah Misumi Makoto mengalahkan Mitsurugi dan Sofia Bulga, umat manusia diselamatkan dari pasukan iblis yang menyerang—untuk saat ini. Sang dewi menyadari kekuatan Makoto yang semakin besar, dan dia melihatnya sebagai lawan yang tidak terlalu mengganggu.',
-            },
-        'Mushoku Tensei: Jobless Reincarnation': {
-            'thumbnail':'https://doroni.me/images/anime/5ff06afb78f37.jpg.webp',
-            'synopsis': 'Tewas saat menyelamatkan orang asing dari tabrakan lalu lintas, NEET berusia 34 tahun bereinkarnasi ke dunia sihir sebagai Rudeus Greyrat, bayi yang baru lahir. Dengan pengetahuan, pengalaman, dan penyesalan dari kehidupan sebelumnya, Rudeus bersumpah untuk menjalani hidup yang memuaskan dan tidak mengulangi kesalahan masa lalunya.',
-            },
-        'Mushoku Tensei: Jobless Reincarnation Part 2': {
-            'thumbnail':'https://doroni.me/images/anime/61515004ac471.jpg.webp',
-            'synopsis': 'Bagian kedua dari Mushoku Tensei: Isekai Ittara Honki Dasu',
-            },
-        'Mushoku Tensei: Jobless Reincarnation Season 2': {
-            'thumbnail':'https://doroni.me/images/anime/64a1ced8ab354.jpg.webp',
-            'synopsis': 'Musim kedua dari Mushoku Tensei: Isekai Ittara Honki Dasu.',
-            },
-        'Mushoku Tensei: Jobless Reincarnation Season 2 Part 2': {
-            'thumbnail':'https://doroni.me/images/anime/6613114ee357f.jpg.webp',
-            'synopsis': 'Second part of Mushoku Tensei II: Isekai Ittara Honki Dasu.',
-            },
-    }
+from faker import Faker
+import random
+import datetime
 
-complete_anime = {
-        'Tsukimichi Moonlit Fantasy': {
-            'thumbnail':'https://doroni.me/images/anime/60d9a6966135b.jpg.webp',
-            'synopsis': 'Makoto Misumi hanyalah seorang siswa sekolah menengah biasa ketika dia, karena keadaan tertentu yang dihadapi orang tuanya, dipanggil ke dunia lain untuk menjadi "pahlawan."',
-            },
-        'Tsukimichi Moonlit Fantasy Season 2': {
-            'thumbnail':'https://doroni.me/images/anime/659c53dd27cf2.jpg.webp',
-            'synopsis': 'Setelah Misumi Makoto mengalahkan Mitsurugi dan Sofia Bulga, umat manusia diselamatkan dari pasukan iblis yang menyerang—untuk saat ini. Sang dewi menyadari kekuatan Makoto yang semakin besar, dan dia melihatnya sebagai lawan yang tidak terlalu mengganggu.',
-            },
-        'Mushoku Tensei: Jobless Reincarnation': {
-            'thumbnail':'https://doroni.me/images/anime/5ff06afb78f37.jpg.webp',
-            'synopsis': 'Tewas saat menyelamatkan orang asing dari tabrakan lalu lintas, NEET berusia 34 tahun bereinkarnasi ke dunia sihir sebagai Rudeus Greyrat, bayi yang baru lahir. Dengan pengetahuan, pengalaman, dan penyesalan dari kehidupan sebelumnya, Rudeus bersumpah untuk menjalani hidup yang memuaskan dan tidak mengulangi kesalahan masa lalunya.',
-            },
-        'Mushoku Tensei: Jobless Reincarnation Part 2': {
-            'thumbnail':'https://doroni.me/images/anime/61515004ac471.jpg.webp',
-            'synopsis': 'Bagian kedua dari Mushoku Tensei: Isekai Ittara Honki Dasu',
-            },
-        'Mushoku Tensei: Jobless Reincarnation Season 2': {
-            'thumbnail':'https://doroni.me/images/anime/64a1ced8ab354.jpg.webp',
-            'synopsis': 'Musim kedua dari Mushoku Tensei: Isekai Ittara Honki Dasu.',
-            },
-        'Mushoku Tensei: Jobless Reincarnation Season 2 Part 2': {
-            'thumbnail':'https://doroni.me/images/anime/6613114ee357f.jpg.webp',
-            'synopsis': 'Second part of Mushoku Tensei II: Isekai Ittara Honki Dasu.',
-            },
-    }
+def generate_random_anime_rilis_data(jumlah_data_anime_rilis):
+    fake = Faker()
+    hari = ['Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu', 'Minggu']
+    anime_data = []
+    
+    for _ in range(jumlah_data_anime_rilis):
+        anime = {
+            'id': str(random.randint(100, 999)),
+            'day': random.choice(hari),
+            'title': fake.sentence(nb_words=6),
+            'thumbnail': 'https://via.placeholder.com/300x400',  # Ganti dengan placeholder image
+            'synopsis': fake.paragraph(nb_sentences=3),
+        }
+        anime_data.append(anime)
+        
+    return anime_data
 
-comments = [
-    {'id': '1',
-    'sender': 'anonim',
-    'date': '10/08/2024 10:10:34',
-    'comment': 'Wah mantep banget nih anime aku sangat suka',},
-    
-    {'id': '2',
-    'sender': 'anonim',
-    'date': '10/08/2024 10:10:34',
-    'comment': 'Suka suka',},
-    
-    {'id': '3',
-    'sender': 'anonim',
-    'date': '10/08/2024 10:10:34',
-    'comment': 'Konsisten ya ',},
-    
-    {'id': '4',
-    'sender': 'anonim',
-    'date': '10/08/2024 10:10:34',
-    'comment': 'Suka deh',},
-    
-    {'id': '5',
-    'sender': 'anonim',
-    'date': '10/08/2024 10:10:34',
-    'comment': 'comment ke 5',},
-    
-]
 
-jadwalrilis = [
-    {
-    'id': '1',
-    'day': 'Senin',
-    'title': 'Tsukimichi Moonlit Fantasy',
-    'thumbnail':'https://doroni.me/images/anime/60d9a6966135b.jpg.webp',
-    'synopsis': 'Makoto Misumi hanyalah seorang siswa sekolah menengah biasa ketika dia, karena keadaan tertentu yang dihadapi orang tuanya, dipanggil ke dunia lain untuk menjadi "pahlawan."',
-    },
-    {
-    'id': '2',
-    'day': 'Selasa',
-    'title': 'Mushoku Tensei: Jobless Reincarnation Season 2 Part 2',
-    'thumbnail':'https://doroni.me/images/anime/6613114ee357f.jpg.webp',
-    'synopsis': 'Second part of Mushoku Tensei II: Isekai Ittara Honki Dasu.',
-    },
-]
+def generate_random_anime_complete_data(jumlah_data_anime_complete):
+    fake = Faker()
+    anime_data_complete = []
+    
+    for _ in range(jumlah_data_anime_complete):
+        anime = {
+            'id': str(random.randint(100, 999)),
+            'title': fake.sentence(nb_words=10),
+            'thumbnail': 'https://via.placeholder.com/300x400',  # Ganti dengan placeholder image
+            'synopsis': fake.paragraph(nb_sentences=3),
+        }
+        anime_data_complete.append(anime)
+        
+    return anime_data_complete
+
+
+def generate_random_anime_episode_data(jumlah_data_anime_episode):
+    fake = Faker()
+    anime_data_episode = []
+    
+    for _ in range(jumlah_data_anime_episode):
+        anime = {
+            'id': str(random.randint(100, 999)),
+            'title': fake.sentence(nb_words=7),
+            'thumbnail': 'https://via.placeholder.com/300x400',  # Ganti dengan placeholder image
+            'synopsis': fake.paragraph(nb_sentences=3),
+        }
+        anime_data_episode.append(anime)
+        
+    return anime_data_episode
+
+
+def generate_random_reaksi(jumlah_reaksi):
+    fake = Faker()
+    data_reaksi = []
+
+    for _ in range(jumlah_reaksi):
+        reaksi = {
+            'id': str(random.randint(100, 999)),
+            'sender': fake.name(),  # Nama pengirim yang random
+            'date': fake.date_between(start_date='-1y', end_date='now').strftime('%d/%m/%Y %H:%M:%S'),
+            'comment': fake.sentence(nb_words=random.randint(3, 10)),  # Kalimat dengan panjang yang bervariasi
+            'like': random.randint(0, 1000),  # Jumlah like random
+            'dislike': random.randint(0, 500),  # Jumlah dislike random (biasanya lebih sedikit dari like)
+        }
+        data_reaksi.append(reaksi)
+
+    return data_reaksi
+
+
+jumlah_reaksi = 50
+jumlah_data_anime_episode = 12
+jumlah_data_anime_complete = 7
+jumlah_data_anime_rilis = 15
+reaksi = generate_random_reaksi(jumlah_reaksi)
+anime_episode = generate_random_anime_episode_data(jumlah_data_anime_episode)
+anime_rilis = generate_random_anime_rilis_data(jumlah_data_anime_rilis)
+anime_complete = generate_random_anime_complete_data(jumlah_data_anime_complete)

@@ -4,10 +4,8 @@ from core.datadummy import *
 def main(request):
     render_template = 'main.html'
     
-    
-    
     context = {
-        'complete_anime':complete_anime,
+        'anime_complete':anime_complete,
     }
     return render(request,render_template,context)
 
@@ -15,7 +13,7 @@ def animeDetail(request):
     render_template = 'animeDetail.html'
     
     context = {
-        'episode_anime': episode_anime,
+        'anime_episode': anime_episode,
     }
     return render(request,render_template,context)
 
@@ -24,8 +22,8 @@ def animePlayEpisode(request):
     
     
     context = {
-        'episode_anime': episode_anime,
-        'comments': comments,
+        'anime_episode': anime_episode,
+        'reaksi': reaksi,
     }
     return render(request,render_template,context)
 
@@ -33,13 +31,13 @@ def animePlayEpisode(request):
 def animeJadwalRilis(request):
     render_template = 'animeJadwalRilis.html'
     
-    jadwal_senin = [anime for anime in jadwalrilis if anime['day'] == 'Senin' ]
-    jadwal_selasa = [anime for anime in jadwalrilis if anime['day'] == 'Selasa' ]
-    jadwal_rabu = [anime for anime in jadwalrilis if anime['day'] == 'Rabu' ]
-    jadwal_kamis = [anime for anime in jadwalrilis if anime['day'] == 'Kamis' ]
-    jadwal_jumat = [anime for anime in jadwalrilis if anime['day'] == 'Jumat' ]
-    jadwal_sabtu = [anime for anime in jadwalrilis if anime['day'] == 'Sabtu' ]
-    jadwal_minggu = [anime for anime in jadwalrilis if anime['day'] == 'Minggu' ]
+    jadwal_senin = [anime for anime in anime_rilis if anime['day'] == 'Senin' ]
+    jadwal_selasa = [anime for anime in anime_rilis if anime['day'] == 'Selasa' ]
+    jadwal_rabu = [anime for anime in anime_rilis if anime['day'] == 'Rabu' ]
+    jadwal_kamis = [anime for anime in anime_rilis if anime['day'] == 'Kamis' ]
+    jadwal_jumat = [anime for anime in anime_rilis if anime['day'] == 'Jumat' ]
+    jadwal_sabtu = [anime for anime in anime_rilis if anime['day'] == 'Sabtu' ]
+    jadwal_minggu = [anime for anime in anime_rilis if anime['day'] == 'Minggu' ]
     
     context = {
         'jadwal_senin': jadwal_senin,
