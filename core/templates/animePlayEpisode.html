@@ -30,8 +30,10 @@ srclang="id"
             
             {# endcomment #}
         </c-example.anime.section.comment>
+
+        <c-example.anime.animedetail.playvideo/>
         
-        <c-example.anime.section.1 title="Episode">
+        <c-example.anime.section.playvideo title="Episode">
                 {% for title,data in episode_anime.items %}
                 <c-example.anime.animeitem.1 
                 url="{% url 'animedetail' %}"
