@@ -20,37 +20,107 @@
                 <c-slot name="nav_content">
                     <c-libs.anime.tabs.jadwalrilis.content name="Senin">
                         <c-slot name="content">
-                            Kontent Anime Hari Senin
+                            <c-example.anime.section.contenttabsjadwal>
+                                {% for anime in jadwal_senin %}
+
+                                    <c-example.anime.animeitem.1 
+                                    url="{% url 'animeplay' %}"
+                                    title="{{anime.title}}" 
+                                    thumbnail="{{anime.thumbnail}}" 
+                                    synopsis="{{anime.synopsis}}"/> 
+
+                                {% endfor %}
+                            </c-example.anime.section.contenttabsjadwal>
                         </c-slot>
                     </c-libs.anime.tabs.jadwalrilis.content>
                     <c-libs.anime.tabs.jadwalrilis.content class="hidden" name="Selasa">
                         <c-slot name="content">
-                            Kontent Anime Hari Selasa
+                            <c-example.anime.section.contenttabsjadwal>
+                                {% for anime in jadwal_selasa %}
+
+                                <c-example.anime.animeitem.1 
+                                url="{% url 'animeplay' %}"
+                                title="{{anime.title}}" 
+                                thumbnail="{{anime.thumbnail}}" 
+                                synopsis="{{anime.synopsis}}"/> 
+
+                            {% endfor %}
+                            </c-example.anime.section.contenttabsjadwal>
                         </c-slot>
                     </c-libs.anime.tabs.jadwalrilis.content>
                     <c-libs.anime.tabs.jadwalrilis.content class="hidden" name="Rabu">
                         <c-slot name="content">
-                            Kontent Anime Hari Rabu
+                            <c-example.anime.section.contenttabsjadwal>
+                                {% for anime in jadwal_rabu %}
+
+                                    <c-example.anime.animeitem.1 
+                                    url="{% url 'animeplay' %}"
+                                    title="{{anime.title}}" 
+                                    thumbnail="{{anime.thumbnail}}" 
+                                    synopsis="{{anime.synopsis}}"/> 
+
+                                {% endfor %}
+                            </c-example.anime.section.contenttabsjadwal>
                         </c-slot>
                     </c-libs.anime.tabs.jadwalrilis.content>
                     <c-libs.anime.tabs.jadwalrilis.content class="hidden" name="Kamis">
                         <c-slot name="content">
-                            Kontent Anime Hari Kamis
+                            <c-example.anime.section.contenttabsjadwal>
+                                {% for anime in jadwal_kamis %}
+
+                                    <c-example.anime.animeitem.1 
+                                    url="{% url 'animeplay' %}"
+                                    title="{{anime.title}}" 
+                                    thumbnail="{{anime.thumbnail}}" 
+                                    synopsis="{{anime.synopsis}}"/> 
+
+                                {% endfor %}
+                            </c-example.anime.section.contenttabsjadwal>
                         </c-slot>
                     </c-libs.anime.tabs.jadwalrilis.content>
                     <c-libs.anime.tabs.jadwalrilis.content class="hidden" name="Jumat">
                         <c-slot name="content">
-                            Kontent Anime Hari Jumat
+                            <c-example.anime.section.contenttabsjadwal>
+                                {% for anime in jadwal_jumat %}
+
+                                    <c-example.anime.animeitem.1 
+                                    url="{% url 'animeplay' %}"
+                                    title="{{anime.title}}" 
+                                    thumbnail="{{anime.thumbnail}}" 
+                                    synopsis="{{anime.synopsis}}"/> 
+
+                                {% endfor %}
+                            </c-example.anime.section.contenttabsjadwal>
                         </c-slot>
                     </c-libs.anime.tabs.jadwalrilis.content>
                     <c-libs.anime.tabs.jadwalrilis.content class="hidden" name="Sabtu">
                         <c-slot name="content">
-                            Kontent Anime Hari Sabtu
+                            <c-example.anime.section.contenttabsjadwal>
+                                {% for anime in jadwal_sabtu %}
+
+                                    <c-example.anime.animeitem.1 
+                                    url="{% url 'animeplay' %}"
+                                    title="{{anime.title}}" 
+                                    thumbnail="{{anime.thumbnail}}" 
+                                    synopsis="{{anime.synopsis}}"/> 
+
+                                {% endfor %}
+                            </c-example.anime.section.contenttabsjadwal>
                         </c-slot>
                     </c-libs.anime.tabs.jadwalrilis.content>
                     <c-libs.anime.tabs.jadwalrilis.content class="hidden" name="Minggu">
                         <c-slot name="content">
-                            Kontent Anime Hari Minggu
+                            <c-example.anime.section.contenttabsjadwal>
+                                {% for anime in jadwal_minggu %}
+
+                                    <c-example.anime.animeitem.1 
+                                    url="{% url 'animeplay' %}"
+                                    title="{{anime.title}}" 
+                                    thumbnail="{{anime.thumbnail}}" 
+                                    synopsis="{{anime.synopsis}}"/> 
+
+                                {% endfor %}
+                            </c-example.anime.section.contenttabsjadwal>
                         </c-slot>
                     </c-libs.anime.tabs.jadwalrilis.content>
                 </c-slot>

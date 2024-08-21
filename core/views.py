@@ -1,88 +1,6 @@
 from django.shortcuts import render
-
+from core.datadummy import *
 # Create your views here.
-episode_anime = {
-        'Kage no Jitsuryokusha ni Naritakute!': {
-            'thumbnail':'https://doroni.me/images/anime/633d819f00981.jpg.webp',
-            'synopsis': 'Makoto Misumi hanyalah seorang siswa sekolah menengah biasa ketika dia, karena keadaan tertentu yang dihadapi orang tuanya, dipanggil ke dunia lain untuk menjadi "pahlawan."',
-            },
-        'Tsukimichi Moonlit Fantasy Season 2': {
-            'thumbnail':'https://doroni.me/images/anime/659c53dd27cf2.jpg.webp',
-            'synopsis': 'Setelah Misumi Makoto mengalahkan Mitsurugi dan Sofia Bulga, umat manusia diselamatkan dari pasukan iblis yang menyerang—untuk saat ini. Sang dewi menyadari kekuatan Makoto yang semakin besar, dan dia melihatnya sebagai lawan yang tidak terlalu mengganggu.',
-            },
-        'Mushoku Tensei: Jobless Reincarnation': {
-            'thumbnail':'https://doroni.me/images/anime/5ff06afb78f37.jpg.webp',
-            'synopsis': 'Tewas saat menyelamatkan orang asing dari tabrakan lalu lintas, NEET berusia 34 tahun bereinkarnasi ke dunia sihir sebagai Rudeus Greyrat, bayi yang baru lahir. Dengan pengetahuan, pengalaman, dan penyesalan dari kehidupan sebelumnya, Rudeus bersumpah untuk menjalani hidup yang memuaskan dan tidak mengulangi kesalahan masa lalunya.',
-            },
-        'Mushoku Tensei: Jobless Reincarnation Part 2': {
-            'thumbnail':'https://doroni.me/images/anime/61515004ac471.jpg.webp',
-            'synopsis': 'Bagian kedua dari Mushoku Tensei: Isekai Ittara Honki Dasu',
-            },
-        'Mushoku Tensei: Jobless Reincarnation Season 2': {
-            'thumbnail':'https://doroni.me/images/anime/64a1ced8ab354.jpg.webp',
-            'synopsis': 'Musim kedua dari Mushoku Tensei: Isekai Ittara Honki Dasu.',
-            },
-        'Mushoku Tensei: Jobless Reincarnation Season 2 Part 2': {
-            'thumbnail':'https://doroni.me/images/anime/6613114ee357f.jpg.webp',
-            'synopsis': 'Second part of Mushoku Tensei II: Isekai Ittara Honki Dasu.',
-            },
-    }
-
-complete_anime = {
-        'Tsukimichi Moonlit Fantasy': {
-            'thumbnail':'https://doroni.me/images/anime/60d9a6966135b.jpg.webp',
-            'synopsis': 'Makoto Misumi hanyalah seorang siswa sekolah menengah biasa ketika dia, karena keadaan tertentu yang dihadapi orang tuanya, dipanggil ke dunia lain untuk menjadi "pahlawan."',
-            },
-        'Tsukimichi Moonlit Fantasy Season 2': {
-            'thumbnail':'https://doroni.me/images/anime/659c53dd27cf2.jpg.webp',
-            'synopsis': 'Setelah Misumi Makoto mengalahkan Mitsurugi dan Sofia Bulga, umat manusia diselamatkan dari pasukan iblis yang menyerang—untuk saat ini. Sang dewi menyadari kekuatan Makoto yang semakin besar, dan dia melihatnya sebagai lawan yang tidak terlalu mengganggu.',
-            },
-        'Mushoku Tensei: Jobless Reincarnation': {
-            'thumbnail':'https://doroni.me/images/anime/5ff06afb78f37.jpg.webp',
-            'synopsis': 'Tewas saat menyelamatkan orang asing dari tabrakan lalu lintas, NEET berusia 34 tahun bereinkarnasi ke dunia sihir sebagai Rudeus Greyrat, bayi yang baru lahir. Dengan pengetahuan, pengalaman, dan penyesalan dari kehidupan sebelumnya, Rudeus bersumpah untuk menjalani hidup yang memuaskan dan tidak mengulangi kesalahan masa lalunya.',
-            },
-        'Mushoku Tensei: Jobless Reincarnation Part 2': {
-            'thumbnail':'https://doroni.me/images/anime/61515004ac471.jpg.webp',
-            'synopsis': 'Bagian kedua dari Mushoku Tensei: Isekai Ittara Honki Dasu',
-            },
-        'Mushoku Tensei: Jobless Reincarnation Season 2': {
-            'thumbnail':'https://doroni.me/images/anime/64a1ced8ab354.jpg.webp',
-            'synopsis': 'Musim kedua dari Mushoku Tensei: Isekai Ittara Honki Dasu.',
-            },
-        'Mushoku Tensei: Jobless Reincarnation Season 2 Part 2': {
-            'thumbnail':'https://doroni.me/images/anime/6613114ee357f.jpg.webp',
-            'synopsis': 'Second part of Mushoku Tensei II: Isekai Ittara Honki Dasu.',
-            },
-    }
-
-comments = [
-    {'id': '1',
-    'sender': 'anonim',
-    'date': '10/08/2024 10:10:34',
-    'comment': 'Wah mantep banget nih anime aku sangat suka',},
-    
-    {'id': '2',
-    'sender': 'anonim',
-    'date': '10/08/2024 10:10:34',
-    'comment': 'Suka suka',},
-    
-    {'id': '3',
-    'sender': 'anonim',
-    'date': '10/08/2024 10:10:34',
-    'comment': 'Konsisten ya ',},
-    
-    {'id': '4',
-    'sender': 'anonim',
-    'date': '10/08/2024 10:10:34',
-    'comment': 'Suka deh',},
-    
-    {'id': '5',
-    'sender': 'anonim',
-    'date': '10/08/2024 10:10:34',
-    'comment': 'comment ke 5',},
-    
-]
-
 def main(request):
     render_template = 'main.html'
     
@@ -115,7 +33,21 @@ def animePlayEpisode(request):
 def animeJadwalRilis(request):
     render_template = 'animeJadwalRilis.html'
     
+    jadwal_senin = [anime for anime in jadwalrilis if anime['day'] == 'Senin' ]
+    jadwal_selasa = [anime for anime in jadwalrilis if anime['day'] == 'Selasa' ]
+    jadwal_rabu = [anime for anime in jadwalrilis if anime['day'] == 'Rabu' ]
+    jadwal_kamis = [anime for anime in jadwalrilis if anime['day'] == 'Kamis' ]
+    jadwal_jumat = [anime for anime in jadwalrilis if anime['day'] == 'Jumat' ]
+    jadwal_sabtu = [anime for anime in jadwalrilis if anime['day'] == 'Sabtu' ]
+    jadwal_minggu = [anime for anime in jadwalrilis if anime['day'] == 'Minggu' ]
+    
     context = {
-        'complete_anime':complete_anime,
+        'jadwal_senin': jadwal_senin,
+        'jadwal_selasa': jadwal_selasa,
+        'jadwal_rabu': jadwal_rabu,
+        'jadwal_kamis': jadwal_kamis,
+        'jadwal_jumat': jadwal_jumat,
+        'jadwal_sabtu': jadwal_sabtu,
+        'jadwal_minggu': jadwal_minggu,
     }
     return render(request,render_template,context)
