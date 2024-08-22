@@ -53,10 +53,10 @@ def animeJadwalRilis(request):
 def animeDaftarList(request):
     render_template = 'animeDaftarList.html'
     
-    by_a = [anime for anime in anime_by_string if anime['list_by'] == 'A' ]
-    by_b = [anime for anime in anime_by_string if anime['list_by'] == 'B' ]
-    by_c = [anime for anime in anime_by_string if anime['list_by'] == 'C' ]
-    by_d = [anime for anime in anime_by_string if anime['list_by'] == 'D' ]
+    by_a = [anime for anime in anime_by_string if anime['title'].startswith('A') ]
+    by_b = [anime for anime in anime_by_string if anime['title'].startswith('B') ]
+    by_c = [anime for anime in anime_by_string if anime['title'].startswith('C') ]
+    by_d = [anime for anime in anime_by_string if anime['title'].startswith('D') ]
     
     
     context = {

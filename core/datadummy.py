@@ -5,13 +5,11 @@ import string
 
 def generate_random_anime_by_string(jumlah_data_by_string):
     fake = Faker()
-    list_by = random.sample(string.ascii_uppercase,26)
     anime_data_by_string = []
     
     for _ in range(jumlah_data_by_string):
         anime = {
             'id': str(random.randint(100, 999)),
-            'list_by': random.choice(list_by),
             'title': fake.sentence(nb_words=6),
             'thumbnail': 'https://doroni.me/images/anime/633d819f00981.jpg.webp',  # Ganti dengan placeholder image
             'synopsis': fake.paragraph(nb_sentences=3),
