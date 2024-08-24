@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.utils.text import slugify
 from core.datadummy import *
 # Create your views here.
 def main(request):
@@ -114,4 +115,24 @@ def animeDaftarList(request):
         
     }
     
+    return render(request, render_template, context)
+
+
+
+
+def animeGenreList(request):
+    
+    render_template = 'animeGenreList.html'
+    genres = [
+        "Action", "Adventure", "Comedy", "Drama", "Fantasy", "Horror",
+        "Mystery", "Romance", "Sci-Fi", "Slice of Life", "Sports", "Thriller",
+        "Shounen", "Shoujo", "Seinen", "Josei", "Isekai", "Supernatural",
+        "Historical", "Magical Girl", "Mecha", "Music", "Psychological"
+    ]
+    sluggenres = slugify(genres)
+    context = {
+        'anime_by_genre': anime_by_genre,
+        'genres': genres,
+        'sluggenres': sluggenres,
+    }
     return render(request, render_template, context)

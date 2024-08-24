@@ -1,0 +1,35 @@
+{% extends 'base/default.html' %}
+
+{% block content %}
+
+<c-example.anime.layout.jadwalrilis.base >
+    <c-slot name="content">
+        <c-example.anime.section.jadwalrilis title="Daftar genre anime">
+
+            <c-libs.anime.tabs.jadwalrilis.base>
+                <c-slot name="nav_tabs">
+                    {% for genre in genres %}
+                        {% if genre == "Action" %}
+                         {% for url in sluggenre %}
+                         <c-libs.anime.tabs.genre.nav name="{{genre}}" url="{{url}}"  select="false"/>
+                         {% endfor %}
+    
+                        {% elif genre != "Action" %}
+                            {% for url in sluggenre %}
+                             <c-libs.anime.tabs.genre.nav name="{{genre}}" url="{{url}}"  select="false"/>
+                            {% endfor %}
+                        {% endif %}
+                    {% endfor %}
+                    
+                </c-slot>
+
+               
+            </c-libs.anime.tabs.jadwalrilis.base>
+
+        </c-example.anime.section.jadwalrilis>
+    </c-slot>
+    <c-slot name="sidebar">
+        <c-example.anime.sidebar.1 />
+    </c-slot>
+</c-example.anime.layout.jadwalrilis.base>
+{% endblock %}

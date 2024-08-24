@@ -1,4 +1,5 @@
 from faker import Faker
+from django.utils.text import slugify
 import random
 import datetime
 import string
@@ -102,6 +103,34 @@ def generate_random_reaksi(jumlah_reaksi):
     return data_reaksi
 
 
+
+def generate_random_anime_by_genre(jumlah_data_anime_genre):
+
+    fake = Faker()
+    # Daftar genre yang lebih detail dan bervariasi
+    genres = [
+        "Action", "Adventure", "Comedy", "Drama", "Fantasy", "Horror",
+        "Mystery", "Romance", "Sci-Fi", "Slice of Life", "Sports", "Thriller",
+        "Shounen", "Shoujo", "Seinen", "Josei", "Isekai", "Supernatural",
+        "Historical", "Magical Girl", "Mecha", "Music", "Psychological"
+    ]
+
+    anime_data_by_genre = []
+
+    for _ in range(jumlah_data_anime_genre):
+        anime = {
+            'id': str(random.randint(100, 999)),
+            'title': fake.sentence(nb_words=7),
+            'thumbnail': 'https://doroni.me/images/anime/633d819f00981.jpg.webp',  # Ganti dengan placeholder image
+            'synopsis': fake.paragraph(nb_sentences=3),
+            'genres': random.sample(genres, k=random.randint(1, 3)),  # Pilih 1-3 genre secara acak
+            
+        }
+        anime_data_by_genre.append(anime)
+
+    return anime_data_by_genre
+
+
 jumlah_reaksi = 15
 jumlah_data_anime_episode = 12
 jumlah_data_anime_complete = 7
@@ -114,6 +143,7 @@ anime_episode = generate_random_anime_episode_data(jumlah_data_anime_episode)
 anime_rilis = generate_random_anime_rilis_data(jumlah_data_anime_rilis)
 anime_complete = generate_random_anime_complete_data(jumlah_data_anime_complete)
 anime_complete2 = generate_random_anime_list(500)
+anime_by_genre = generate_random_anime_by_genre(50)
 
 print(anime_by_string)
 print(reaksi)
