@@ -68,6 +68,22 @@ def generate_random_anime_episode_data(jumlah_data_anime_episode):
     return anime_data_episode
 
 
+def generate_random_anime_list(jumlah_data_anime_list):
+    fake = Faker()
+    anime_data_list = []
+    
+    for _ in range(jumlah_data_anime_list):
+        anime = {
+            'id': str(random.randint(100, 999)),
+            'title': fake.sentence(nb_words=7),
+            'thumbnail': 'https://doroni.me/images/anime/633d819f00981.jpg.webp',  # Ganti dengan placeholder image
+            'synopsis': fake.paragraph(nb_sentences=3),
+        }
+        anime_data_list.append(anime)
+        
+    return anime_data_list
+
+
 def generate_random_reaksi(jumlah_reaksi):
     fake = Faker()
     data_reaksi = []
@@ -97,3 +113,10 @@ reaksi = generate_random_reaksi(jumlah_reaksi)
 anime_episode = generate_random_anime_episode_data(jumlah_data_anime_episode)
 anime_rilis = generate_random_anime_rilis_data(jumlah_data_anime_rilis)
 anime_complete = generate_random_anime_complete_data(jumlah_data_anime_complete)
+anime_complete2 = generate_random_anime_list(500)
+
+print(anime_by_string)
+print(reaksi)
+print(anime_episode)
+print(anime_rilis)
+print(anime_complete)
