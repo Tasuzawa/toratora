@@ -53,16 +53,12 @@ def animeJadwalRilis(request):
 def animeDaftarList(request):
     render_template = 'animeDaftarList.html'
     
-    by_a = [anime for anime in anime_by_string if anime['title'].startswith('A') ]
-    by_b = [anime for anime in anime_by_string if anime['title'].startswith('B') ]
-    by_c = [anime for anime in anime_by_string if anime['title'].startswith('C') ]
-    by_d = [anime for anime in anime_by_string if anime['title'].startswith('D') ]
+    huruf = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
+    anime_all = [anime for anime in anime_complete if anime['title'].startswith(huruf)]
     
-    
+
     context = {
-        'by_a' : by_a,
-        'by_b' : by_b,
-        'by_c' : by_c,
-        'by_d' : by_d,
+        'huruf': huruf,
+        'anime_all': anime_all, 
     }
-    return render(request,render_template,context)
+    return render(request, render_template, context)
