@@ -129,10 +129,9 @@ def animeGenreList(request):
         "Shounen", "Shoujo", "Seinen", "Josei", "Isekai", "Supernatural",
         "Historical", "Magical Girl", "Mecha", "Music", "Psychological"
     ]
-    sluggenres = slugify(genres)
     context = {
         'anime_by_genre': anime_by_genre,
         'genres': genres,
-        'sluggenres': sluggenres,
+
     }
     return render(request, render_template, context)

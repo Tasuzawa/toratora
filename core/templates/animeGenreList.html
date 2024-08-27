@@ -10,17 +10,12 @@
                 <c-slot name="nav_tabs">
                     {% for genre in genres %}
                         {% if genre == "Action" %}
-                         {% for url in sluggenre %}
-                         <c-libs.anime.tabs.genre.nav name="{{genre}}" url="{{url}}"  select="false"/>
-                         {% endfor %}
+                         <c-libs.anime.tabs.genre.nav name="{{genre}}" url="#"  select="false"/>
     
-                        {% elif genre != "Action" %}
-                            {% for url in sluggenre %}
-                             <c-libs.anime.tabs.genre.nav name="{{genre}}" url="{{url}}"  select="false"/>
-                            {% endfor %}
+                        {% else %}
+                         <c-libs.anime.tabs.genre.nav name="{{genre}}" url="#"  select="false"/>
                         {% endif %}
                     {% endfor %}
-                    
                 </c-slot>
 
                
