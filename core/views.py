@@ -1,10 +1,10 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.utils.text import slugify
 from core.datadummy import *
+
 # Create your views here.
 def main(request):
     render_template = 'main.html'
-    
     context = {
         'anime_complete':anime_complete,
     }
@@ -20,14 +20,11 @@ def animeDetail(request):
 
 def animePlayEpisode(request):
     render_template = 'animePlayEpisode.html'
-    
-    
     context = {
         'anime_episode': anime_episode,
         'reaksi': reaksi,
     }
     return render(request,render_template,context)
-
 
 def animeJadwalRilis(request):
     render_template = 'animeJadwalRilis.html'
@@ -117,11 +114,7 @@ def animeDaftarList(request):
     
     return render(request, render_template, context)
 
-
-
-
 def animeGenreList(request):
-    
     render_template = 'animeGenreList.html'
     genres = [
         "Action", "Adventure", "Comedy", "Drama", "Fantasy", "Horror",
@@ -129,9 +122,24 @@ def animeGenreList(request):
         "Shounen", "Shoujo", "Seinen", "Josei", "Isekai", "Supernatural",
         "Historical", "Magical Girl", "Mecha", "Music", "Psychological"
     ]
+    
+    genre_slugs = {genre: slugify(genres) for genre in genres}
     context = {
         'anime_by_genre': anime_by_genre,
         'genres': genres,
-
+        'genre_slugs': genre_slugs,
     }
     return render(request, render_template, context)
+
+def animeGenreDetail(request, genre_slug):
+    render_template = "animeGenreDetail.html"
+    genre = get_object_or_404(genres, genre_slug=genre_slugs)
+    
+    anime_by_genres = [anime for anime in anime_by_genre if genre in anime['genres']]
+    
+    context = {
+        'anime_by_genres': anime_by_genres,
+        'genre': genre,
+    }
+    
+    return render(request)

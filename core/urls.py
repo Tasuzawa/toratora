@@ -9,4 +9,5 @@ urlpatterns = [
     path('anime/jadwal-rilis/',views.animeJadwalRilis,name='animejadwalrilis'),
     path('anime/list/',views.animeDaftarList,name='animedaftarlist'),
     path('genre/',views.animeGenreList,name='animegenrelist'),
+    path('genre/<slug:slug>/', views.animeGenreDetail, name='animegenredetail'),
 ]

@@ -9,12 +9,10 @@
             <c-libs.anime.tabs.jadwalrilis.base>
                 <c-slot name="nav_tabs">
                     {% for genre in genres %}
-                        {% if genre == "Action" %}
-                         <c-libs.anime.tabs.genre.nav name="{{genre}}" url="#"  select="false"/>
+                       
+                         <c-libs.anime.tabs.genre.nav name="{{genre}}" url="{% url 'animegenredetail' slug=genre.slug  %}"  select="false"/>
     
-                        {% else %}
-                         <c-libs.anime.tabs.genre.nav name="{{genre}}" url="#"  select="false"/>
-                        {% endif %}
+                       
                     {% endfor %}
                 </c-slot>
 
