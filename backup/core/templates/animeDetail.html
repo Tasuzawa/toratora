@@ -1,0 +1,21 @@
+{% extends 'base/default.html' %}
+
+{% block content %}
+<c-example.anime.animedetail.1/>
+    <c-example.anime.layout.1.base >
+        <c-slot name="content">
+            <c-example.anime.section.1 title="Episode">
+                {% for anime in anime_episode %}
+                <c-example.anime.animeitem.1 
+                url="{% url 'animeplay' %}"
+                title="{{anime.title}}" 
+                thumbnail="{{anime.thumbnail}}" 
+                synopsis="{{anime.synopsis}}"/>
+                {% endfor %}
+            </c-example.anime.section.1>
+        </c-slot>
+        <c-slot name="sidebar">
+            <c-example.anime.sidebar.1 />
+        </c-slot>
+    </c-example.anime.layout.1.base>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% load component_tags %}
+{% load static tailwind_tags %}
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="id">
+	<head>
+    <title>Toratora</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <c-libs.public.favicon />
+		<link rel="stylesheet" href="{% static 'plyr/dist/plyr.css' %}"/>
+		<c-libs.public.videojs.css />
+		<c-libs.public.plyr.css />
+        {% component_css_dependencies %}
+		{% tailwind_css %}
+	</head>
+
+	<body class="bg-vistablue-300 leading-normal tracking-normal">
+		{{header}}
+		<div class="lg:container mx-auto">
+			{{slot}}
+		</div>
+		{{footer}}
+        {% component_js_dependencies %}
+		<c-libs.public.plyr.js />
+		<c-libs.public.preline />
+		<c-libs.public.lucide />
+		<c-libs.public.videojs.js />
+		<c-libs.public.plyr.js />
+		<script src="{% static 'plyr/dist/plyr.js' %}"></script>
+	</body>
+</html>

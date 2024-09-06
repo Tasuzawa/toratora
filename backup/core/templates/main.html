@@ -1,0 +1,26 @@
+{% extends 'base/default.html' %}
+
+{% block content %}
+<c-example.preline.announcement.2 title="Welcome To Toratora">
+    <p>!!!  PENTING  !!!</p>
+    <p>Website asli Samehadaku hanya ini, selain website ini adalah website palsu, Bookmark juga Samehadaku.care sebagai direct ke website Samehadaku asli 
+    SAMEHADAKU.CARE</p>
+    <p>Bantu kami dengan rekomendasikan Samehadaku di media sosial, dan cantumkan sumber SAMEHADAKU.CARE bila kalian ingin merepost Anime yang diterjemahkan Samehadaku.</p>
+</c-example.preline.announcement.2>
+<c-example.anime.layout.1.base >
+    <c-slot name="content">
+        <c-example.anime.section.1 title="Complete">
+            {% for anime in anime_complete %}
+            <c-example.anime.animeitem.1 
+            url="{% url 'animedetail' %}"
+            title="{{anime.title}}" 
+            thumbnail="{{anime.thumbnail}}" 
+            synopsis="{{anime.synopsis}}"/>
+            {% endfor %}
+        </c-example.anime.section.1>
+    </c-slot>
+    <c-slot name="sidebar">
+        <c-example.anime.sidebar.1 />
+    </c-slot>
+</c-example.anime.layout.1.base>
+{% endblock %}

@@ -1,0 +1,451 @@
+{% extends 'base/default.html' %}
+
+{% block content %}
+
+<c-example.anime.layout.daftaranime.base >
+    <c-slot name="content">
+        <c-example.anime.section.daftaranime title="daftar anime">
+
+            <c-libs.anime.tabs.daftaranime.base>
+                <c-slot name="nav_tabs">
+                    {% for list in huruf %}
+
+                      {% if list == 'A' %}
+                      <c-libs.anime.tabs.daftaranime.nav name="{{list}}" status="active" select="true"/>
+                      {% else %}
+                      <c-libs.anime.tabs.daftaranime.nav name="{{list}}" select="false"/>
+                      {% endif %}
+                    
+                    {% endfor %}
+                    
+                </c-slot>
+
+                <c-slot name="nav_content">
+                    <c-libs.anime.tabs.daftaranime.content name="A">
+                      <c-slot name="content">
+                        <c-example.anime.section.contenttabsjadwal>
+
+                          {% for anime in anime_a %}
+                                <c-example.anime.animeitem.1 
+                                url="{% url 'animedetail' %}"
+                                title="{{anime.title}}" 
+                                thumbnail="{{anime.thumbnail}}" 
+                                synopsis="{{anime.synopsis}}"/>
+
+                          {% endfor %}
+                        </c-example.anime.section.contenttabsjadwal>
+                      </c-slot>
+                    </c-libs.anime.tabs.daftaranime.content>
+
+                    <c-libs.anime.tabs.daftaranime.content name="B" class="hidden">
+                      <c-slot name="content">
+                        <c-example.anime.section.contenttabsjadwal>
+
+                          {% for anime in anime_b %}
+                                <c-example.anime.animeitem.1 
+                                url="{% url 'animedetail' %}"
+                                title="{{anime.title}}" 
+                                thumbnail="{{anime.thumbnail}}" 
+                                synopsis="{{anime.synopsis}}"/>
+
+                          {% endfor %}
+                        </c-example.anime.section.contenttabsjadwal>
+                      </c-slot>
+                    </c-libs.anime.tabs.daftaranime.content>
+
+
+                    <c-libs.anime.tabs.daftaranime.content name="C" class="hidden">
+                      <c-slot name="content">
+                        <c-example.anime.section.contenttabsjadwal>
+
+                          {% for anime in anime_c %}
+                                <c-example.anime.animeitem.1 
+                                url="{% url 'animedetail' %}"
+                                title="{{anime.title}}" 
+                                thumbnail="{{anime.thumbnail}}" 
+                                synopsis="{{anime.synopsis}}"/>
+
+                          {% endfor %}
+                        </c-example.anime.section.contenttabsjadwal>
+                      </c-slot>
+                    </c-libs.anime.tabs.daftaranime.content>
+
+                    <c-libs.anime.tabs.daftaranime.content name="D" class="hidden">
+                      <c-slot name="content">
+                        <c-example.anime.section.contenttabsjadwal>
+
+                          {% for anime in anime_d %}
+                                <c-example.anime.animeitem.1 
+                                url="{% url 'animedetail' %}"
+                                title="{{anime.title}}" 
+                                thumbnail="{{anime.thumbnail}}" 
+                                synopsis="{{anime.synopsis}}"/>
+
+                          {% endfor %}
+                        </c-example.anime.section.contenttabsjadwal>
+                      </c-slot>
+                    </c-libs.anime.tabs.daftaranime.content>
+
+                    <c-libs.anime.tabs.daftaranime.content name="E" class="hidden">
+                      <c-slot name="content">
+                        <c-example.anime.section.contenttabsjadwal>
+
+                          {% for anime in anime_e %}
+                                <c-example.anime.animeitem.1 
+                                url="{% url 'animedetail' %}"
+                                title="{{anime.title}}" 
+                                thumbnail="{{anime.thumbnail}}" 
+                                synopsis="{{anime.synopsis}}"/>
+
+                          {% endfor %}
+                        </c-example.anime.section.contenttabsjadwal>
+                      </c-slot>
+                    </c-libs.anime.tabs.daftaranime.content>
+
+                    <c-libs.anime.tabs.daftaranime.content name="F" class="hidden">
+                      <c-slot name="content">
+                        <c-example.anime.section.contenttabsjadwal>
+
+                          {% for anime in anime_f %}
+                                <c-example.anime.animeitem.1 
+                                url="{% url 'animedetail' %}"
+                                title="{{anime.title}}" 
+                                thumbnail="{{anime.thumbnail}}" 
+                                synopsis="{{anime.synopsis}}"/>
+
+                          {% endfor %}
+                        </c-example.anime.section.contenttabsjadwal>
+                      </c-slot>
+                    </c-libs.anime.tabs.daftaranime.content>
+
+                    <c-libs.anime.tabs.daftaranime.content name="G" class="hidden">
+                      <c-slot name="content">
+                        <c-example.anime.section.contenttabsjadwal>
+
+                          {% for anime in anime_g %}
+                                <c-example.anime.animeitem.1 
+                                url="{% url 'animedetail' %}"
+                                title="{{anime.title}}" 
+                                thumbnail="{{anime.thumbnail}}" 
+                                synopsis="{{anime.synopsis}}"/>
+
+                          {% endfor %}
+                        </c-example.anime.section.contenttabsjadwal>
+                      </c-slot>
+                    </c-libs.anime.tabs.daftaranime.content>
+
+                    <c-libs.anime.tabs.daftaranime.content name="H" class="hidden">
+                      <c-slot name="content">
+                        <c-example.anime.section.contenttabsjadwal>
+        
+                          {% for anime in anime_h %}
+                                <c-example.anime.animeitem.1 
+                                url="{% url 'animedetail' %}"
+                                title="{{anime.title}}" 
+                                thumbnail="{{anime.thumbnail}}" 
+                                synopsis="{{anime.synopsis}}"/>
+        
+                          {% endfor %}
+                        </c-example.anime.section.contenttabsjadwal>
+                      </c-slot>
+                    </c-libs.anime.tabs.daftaranime.content>
+        
+                    <c-libs.anime.tabs.daftaranime.content name="I" class="hidden">
+                      <c-slot name="content">
+                        <c-example.anime.section.contenttabsjadwal>
+        
+                          {% for anime in anime_i %}
+                                <c-example.anime.animeitem.1 
+                                url="{% url 'animedetail' %}"
+                                title="{{anime.title}}" 
+                                thumbnail="{{anime.thumbnail}}" 
+                                synopsis="{{anime.synopsis}}"/>
+        
+                          {% endfor %}
+                        </c-example.anime.section.contenttabsjadwal>
+                      </c-slot>
+                    </c-libs.anime.tabs.daftaranime.content>
+        
+                    <c-libs.anime.tabs.daftaranime.content name="J" class="hidden">
+                      <c-slot name="content">
+                        <c-example.anime.section.contenttabsjadwal>
+        
+                          {% for anime in anime_j %}
+                                <c-example.anime.animeitem.1 
+                                url="{% url 'animedetail' %}"
+                                title="{{anime.title}}" 
+                                thumbnail="{{anime.thumbnail}}" 
+                                synopsis="{{anime.synopsis}}"/>
+        
+                          {% endfor %}
+                        </c-example.anime.section.contenttabsjadwal>
+                      </c-slot>
+                    </c-libs.anime.tabs.daftaranime.content>
+        
+                    <c-libs.anime.tabs.daftaranime.content name="K" class="hidden">
+                      <c-slot name="content">
+                        <c-example.anime.section.contenttabsjadwal>
+        
+                          {% for anime in anime_k %}
+                                <c-example.anime.animeitem.1 
+                                url="{% url 'animedetail' %}"
+                                title="{{anime.title}}" 
+                                thumbnail="{{anime.thumbnail}}" 
+                                synopsis="{{anime.synopsis}}"/>
+        
+                          {% endfor %}
+                        </c-example.anime.section.contenttabsjadwal>
+                      </c-slot>
+                    </c-libs.anime.tabs.daftaranime.content>
+
+                    <c-libs.anime.tabs.daftaranime.content name="L" class="hidden">
+                      <c-slot name="content">
+                        <c-example.anime.section.contenttabsjadwal>
+        
+                          {% for anime in anime_l %}
+                                <c-example.anime.animeitem.1 
+                                url="{% url 'animedetail' %}"
+                                title="{{anime.title}}" 
+                                thumbnail="{{anime.thumbnail}}" 
+                                synopsis="{{anime.synopsis}}"/>
+        
+                          {% endfor %}
+                        </c-example.anime.section.contenttabsjadwal>
+                      </c-slot>
+                    </c-libs.anime.tabs.daftaranime.content>
+
+
+                    <c-libs.anime.tabs.daftaranime.content name="M" class="hidden">
+                      <c-slot name="content">
+                        <c-example.anime.section.contenttabsjadwal>
+        
+                          {% for anime in anime_m %}
+                                <c-example.anime.animeitem.1 
+                                url="{% url 'animedetail' %}"
+                                title="{{anime.title}}" 
+                                thumbnail="{{anime.thumbnail}}" 
+                                synopsis="{{anime.synopsis}}"/>
+        
+                          {% endfor %}
+                        </c-example.anime.section.contenttabsjadwal>
+                      </c-slot>
+                    </c-libs.anime.tabs.daftaranime.content>
+
+                    <c-libs.anime.tabs.daftaranime.content name="N" class="hidden">
+                      <c-slot name="content">
+                        <c-example.anime.section.contenttabsjadwal>
+        
+                          {% for anime in anime_n %}
+                                <c-example.anime.animeitem.1 
+                                url="{% url 'animedetail' %}"
+                                title="{{anime.title}}" 
+                                thumbnail="{{anime.thumbnail}}" 
+                                synopsis="{{anime.synopsis}}"/>
+        
+                          {% endfor %}
+                        </c-example.anime.section.contenttabsjadwal>
+                      </c-slot>
+                    </c-libs.anime.tabs.daftaranime.content>
+
+                    <c-libs.anime.tabs.daftaranime.content name="O" class="hidden">
+                      <c-slot name="content">
+                        <c-example.anime.section.contenttabsjadwal>
+        
+                          {% for anime in anime_o %}
+                                <c-example.anime.animeitem.1 
+                                url="{% url 'animedetail' %}"
+                                title="{{anime.title}}" 
+                                thumbnail="{{anime.thumbnail}}" 
+                                synopsis="{{anime.synopsis}}"/>
+        
+                          {% endfor %}
+                        </c-example.anime.section.contenttabsjadwal>
+                      </c-slot>
+                    </c-libs.anime.tabs.daftaranime.content>
+
+                    <c-libs.anime.tabs.daftaranime.content name="P" class="hidden">
+                      <c-slot name="content">
+                        <c-example.anime.section.contenttabsjadwal>
+        
+                          {% for anime in anime_p %}
+                                <c-example.anime.animeitem.1 
+                                url="{% url 'animedetail' %}"
+                                title="{{anime.title}}" 
+                                thumbnail="{{anime.thumbnail}}" 
+                                synopsis="{{anime.synopsis}}"/>
+        
+                          {% endfor %}
+                        </c-example.anime.section.contenttabsjadwal>
+                      </c-slot>
+                    </c-libs.anime.tabs.daftaranime.content>
+
+                    <c-libs.anime.tabs.daftaranime.content name="Q" class="hidden">
+                      <c-slot name="content">
+                        <c-example.anime.section.contenttabsjadwal>
+        
+                          {% for anime in anime_q %}
+                                <c-example.anime.animeitem.1 
+                                url="{% url 'animedetail' %}"
+                                title="{{anime.title}}" 
+                                thumbnail="{{anime.thumbnail}}" 
+                                synopsis="{{anime.synopsis}}"/>
+        
+                          {% endfor %}
+                        </c-example.anime.section.contenttabsjadwal>
+                      </c-slot>
+                    </c-libs.anime.tabs.daftaranime.content>
+
+                    <c-libs.anime.tabs.daftaranime.content name="R" class="hidden">
+                      <c-slot name="content">
+                        <c-example.anime.section.contenttabsjadwal>
+        
+                          {% for anime in anime_r %}
+                                <c-example.anime.animeitem.1 
+                                url="{% url 'animedetail' %}"
+                                title="{{anime.title}}" 
+                                thumbnail="{{anime.thumbnail}}" 
+                                synopsis="{{anime.synopsis}}"/>
+        
+                          {% endfor %}
+                        </c-example.anime.section.contenttabsjadwal>
+                      </c-slot>
+                    </c-libs.anime.tabs.daftaranime.content>
+
+                    <c-libs.anime.tabs.daftaranime.content name="S" class="hidden">
+                      <c-slot name="content">
+                        <c-example.anime.section.contenttabsjadwal>
+        
+                          {% for anime in anime_s %}
+                                <c-example.anime.animeitem.1 
+                                url="{% url 'animedetail' %}"
+                                title="{{anime.title}}" 
+                                thumbnail="{{anime.thumbnail}}" 
+                                synopsis="{{anime.synopsis}}"/>
+        
+                          {% endfor %}
+                        </c-example.anime.section.contenttabsjadwal>
+                      </c-slot>
+                    </c-libs.anime.tabs.daftaranime.content>
+
+                    <c-libs.anime.tabs.daftaranime.content name="T" class="hidden">
+                      <c-slot name="content">
+                        <c-example.anime.section.contenttabsjadwal>
+        
+                          {% for anime in anime_t %}
+                                <c-example.anime.animeitem.1 
+                                url="{% url 'animedetail' %}"
+                                title="{{anime.title}}" 
+                                thumbnail="{{anime.thumbnail}}" 
+                                synopsis="{{anime.synopsis}}"/>
+        
+                          {% endfor %}
+                        </c-example.anime.section.contenttabsjadwal>
+                      </c-slot>
+                    </c-libs.anime.tabs.daftaranime.content>
+
+                    <c-libs.anime.tabs.daftaranime.content name="U" class="hidden">
+                      <c-slot name="content">
+                        <c-example.anime.section.contenttabsjadwal>
+        
+                          {% for anime in anime_u %}
+                                <c-example.anime.animeitem.1 
+                                url="{% url 'animedetail' %}"
+                                title="{{anime.title}}" 
+                                thumbnail="{{anime.thumbnail}}" 
+                                synopsis="{{anime.synopsis}}"/>
+        
+                          {% endfor %}
+                        </c-example.anime.section.contenttabsjadwal>
+                      </c-slot>
+                    </c-libs.anime.tabs.daftaranime.content>
+
+
+                    <c-libs.anime.tabs.daftaranime.content name="V" class="hidden">
+                      <c-slot name="content">
+                        <c-example.anime.section.contenttabsjadwal>
+        
+                          {% for anime in anime_v %}
+                                <c-example.anime.animeitem.1 
+                                url="{% url 'animedetail' %}"
+                                title="{{anime.title}}" 
+                                thumbnail="{{anime.thumbnail}}" 
+                                synopsis="{{anime.synopsis}}"/>
+        
+                          {% endfor %}
+                        </c-example.anime.section.contenttabsjadwal>
+                      </c-slot>
+                    </c-libs.anime.tabs.daftaranime.content>
+
+                    <c-libs.anime.tabs.daftaranime.content name="W" class="hidden">
+                      <c-slot name="content">
+                        <c-example.anime.section.contenttabsjadwal>
+        
+                          {% for anime in anime_w %}
+                                <c-example.anime.animeitem.1 
+                                url="{% url 'animedetail' %}"
+                                title="{{anime.title}}" 
+                                thumbnail="{{anime.thumbnail}}" 
+                                synopsis="{{anime.synopsis}}"/>
+        
+                          {% endfor %}
+                        </c-example.anime.section.contenttabsjadwal>
+                      </c-slot>
+                    </c-libs.anime.tabs.daftaranime.content>
+
+                    <c-libs.anime.tabs.daftaranime.content name="X" class="hidden">
+                      <c-slot name="content">
+                        <c-example.anime.section.contenttabsjadwal>
+        
+                          {% for anime in anime_x %}
+                                <c-example.anime.animeitem.1 
+                                url="{% url 'animedetail' %}"
+                                title="{{anime.title}}" 
+                                thumbnail="{{anime.thumbnail}}" 
+                                synopsis="{{anime.synopsis}}"/>
+        
+                          {% endfor %}
+                        </c-example.anime.section.contenttabsjadwal>
+                      </c-slot>
+                    </c-libs.anime.tabs.daftaranime.content>
+
+                    <c-libs.anime.tabs.daftaranime.content name="Y" class="hidden">
+                      <c-slot name="content">
+                        <c-example.anime.section.contenttabsjadwal>
+        
+                          {% for anime in anime_y %}
+                                <c-example.anime.animeitem.1 
+                                url="{% url 'animedetail' %}"
+                                title="{{anime.title}}" 
+                                thumbnail="{{anime.thumbnail}}" 
+                                synopsis="{{anime.synopsis}}"/>
+        
+                          {% endfor %}
+                        </c-example.anime.section.contenttabsjadwal>
+                      </c-slot>
+                    </c-libs.anime.tabs.daftaranime.content>
+
+                    <c-libs.anime.tabs.daftaranime.content name="Z" class="hidden">
+                      <c-slot name="content">
+                        <c-example.anime.section.contenttabsjadwal>
+        
+                          {% for anime in anime_z %}
+                                <c-example.anime.animeitem.1 
+                                url="{% url 'animedetail' %}"
+                                title="{{anime.title}}" 
+                                thumbnail="{{anime.thumbnail}}" 
+                                synopsis="{{anime.synopsis}}"/>
+        
+                          {% endfor %}
+                        </c-example.anime.section.contenttabsjadwal>
+                      </c-slot>
+                    </c-libs.anime.tabs.daftaranime.content>
+
+                </c-slot>
+            </c-libs.anime.tabs.daftaranime.base>
+        </c-example.anime.section.daftaranime>
+    </c-slot>
+    <c-slot name="sidebar">
+        <c-example.anime.sidebar.1 />
+    </c-slot>
+</c-example.anime.layout.daftaranime.base>
+{% endblock %}

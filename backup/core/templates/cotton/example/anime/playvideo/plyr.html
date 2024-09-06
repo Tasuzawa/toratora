@@ -1,0 +1,46 @@
+{% load static %}
+
+<div class="w-full mx-auto bg-black p-4 rounded-lg my-4 flex flex-col justify-center items-center">
+
+  <h3 class="text-slate-300 lg:text-xl text-lg">Kage No Jitsuryokusha Ni Naritakute!</h3>
+  <h4 class="text-slate-300 lg:text-xl text-lg">Episode 1</h4>
+
+  <div class="mx-auto bg-black p-2 rounded-xl">
+    <div class="container">
+      <video
+      class="rounded-lg" 
+      style="--plyr-color-main: #cb3344;" 
+      controls 
+      crossorigin 
+      playsinline 
+      poster="{% static 'maskot/darikakek.png' %}">
+         <source src="{{video}}" type="video/mp4" size="360">
+         <source src="{{video}}" type="video/mp4" size="480">
+         <source src="{{video}}" type="video/mp4" size="720">
+         <source src="{{video}}" type="video/mp4" size="1080">
+    
+          <!-- Caption files -->
+          <track kind="captions" label="{{label}}" srclang="{{srclang}}" src="{{caption}}"
+              default>
+          <!-- Fallback for browsers that don't support the <video> element -->
+          <a href="{{video}}" download>Download</a>
+      </video>
+    </div>
+    <!-- Plyr resources and browser polyfills are specified in the pen settings -->
+  </div>
+
+  
+
+  <div class="flex justify-between w-full">
+    <button class="flex gap-2 px-2 py-3 text-slate-400 text-sm hover:text-orange-400 focus:text-orange-400">
+      <i data-lucide="arrow-left" class="w-[21px] h-auto"/>
+      Previous
+    </button>
+    <button class="flex gap-2 px-2 py-3 text-slate-400 text-sm hover:text-orange-400 focus:text-orange-400">
+      Next
+      <i data-lucide="arrow-right" class="w-[21px] h-auto"/>
+    </button>
+  </div>
+  
+
+</div>

@@ -1,0 +1,28 @@
+{% load component_tags %}
+{% load static tailwind_tags %}
+
+<!DOCTYPE html>
+<html lang="id" theme="default">
+	<head>
+    <title>Toratora</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <c-libs.public.favicon />
+        {% component_css_dependencies %}
+		{% tailwind_css %}
+        {% block extra_head %}{% endblock extra_head %}
+	</head>
+
+	<body class="bg-vistablue-300 leading-normal tracking-normal">
+		<c-layout.default.header />
+		<div class="lg:container mx-auto">
+			{% block content %}{% endblock content %}
+		</div>
+        <c-layout.default.footer />
+        {% block extra_bottom %}{% endblock extra_bottom %}
+        {% component_js_dependencies %}
+		<c-libs.public.preline />
+		<c-libs.public.lucide />
+	</body>
+</html>

@@ -1,0 +1,55 @@
+{% extends 'base/playvideo.html' %}
+
+{% block content %}
+{% load static %}
+<c-example.anime.playvideo.plyr 
+video="{% static 'api/anime/video/anime.mp4' %}"
+caption="{% static 'api/anime/caption/anime.id.vtt' %}"
+label="Indonesia"
+srclang="id"
+/>
+
+<c-example.anime.layout.1.base >
+    
+    <c-slot name="content">
+
+        <c-example.anime.section.comment title="Reactions - 12K">
+
+            <c-slot name="form">
+            <c-example.anime.comment.form/>
+            </c-slot>
+
+            {# comment card #}
+            {% for comment in reaksi %}
+                <c-example.anime.comment.comment
+                sender="{{comment.sender}}"
+                date="{{comment.date}}"
+                comment="{{comment.comment}}"
+                like="{{comment.like}}"
+                dislike="{{comment.dislike}}"
+                />
+            {% endfor %}
+            
+            {# endcomment #}
+        </c-example.anime.section.comment>
+
+        <c-example.anime.animedetail.playvideo/>
+        
+        <c-example.anime.section.playvideo title="Episode">
+                {% for data in anime_episode %}
+                <c-example.anime.animeitem.1 
+                url="{% url 'animedetail' %}"
+                title="{{data.title}}" 
+                thumbnail="{{data.thumbnail}}" 
+                synopsis="{{data.synopsis}}"/>
+                {% endfor %}
+        </c-example.anime.section.1>
+        </c-slot>
+
+        <c-slot name="sidebar">
+            <c-example.anime.sidebar.1 />
+        </c-slot>
+
+    </c-example.anime.layout.1.base>
+{% endblock content %}
+    

@@ -1,0 +1,46 @@
+{% load static %}
+
+<div class=" snap-always snap-start  w-full p-6 bg-white rounded-2xl border border-gray-200 flex-col justify-start items-start gap-8 flex">
+    <div class="w-full flex-col justify-center items-start gap-3.5 flex">
+        <div class="w-full justify-between items-center inline-flex">
+            <div class="justify-start items-center gap-2.5 flex">
+                <div
+                    class="w-10 h-10 bg-gray-300 rounded-full justify-start items-start gap-2.5 flex">
+                    <img class="rounded-full" src="{% static 'maskot/tiger.png' %}"
+                        alt="Toratora" />
+                </div>
+                <div class="flex-col justify-start items-start gap-1 inline-flex">
+                    <h5 class="text-gray-900 text-sm font-semibold leading-snug capitalize">{{sender}}</h5>
+                    <h6 class="text-gray-500 text-xs font-normal leading-5">{{date}}</h6>
+                </div>
+            </div>
+            
+        </div>
+        <p class="text-slate-600 text-sm font-normal leading-snug">{{comment}}</p>
+    </div>
+    <div class="w-full justify-between items-center inline-flex">
+        <div class="justify-start items-center gap-4 flex">
+            <div class="hs-tooltip justify-start items-center gap-1.5 flex">
+                <button type="button" class="hs-tooltip-toggle flex gap-1 text-slate-500 text-sm font-normal leading-snug hover:text-vistablue-400 hover:fill-vistablue-400 focus:outline-none focus:text-vistablue-400 focus:fill-vistablue-400">
+                   <i class="w-[18px] h-auto" data-lucide="thumbs-up" width="24" heigth="24"/>
+                   {{like}}
+                   <span class="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 transition-opacity inline-block absolute invisible z-10 py-1 px-2 bg-gray-900 text-xs font-medium text-white rounded shadow-sm dark:bg-neutral-700" role="tooltip">
+                    Like
+                  </span>
+                </button>
+            </div>
+            <div class="hs-tooltip justify-start items-center gap-1.5 flex">
+                <button type="button" class="hs-tooltip-toggle text-slate-500 flex gap-1 text-sm font-normal leading-snug hover:text-letto-400 hover:fill-letto-400 focus:outline-none focus:text-letto-400 focus:fill-letto-400">
+                   <i class="w-[18px] h-auto" data-lucide="thumbs-down" width="24" heigth="24"/>
+                   {{dislike}}
+                   <span class="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 transition-opacity inline-block absolute invisible z-10 py-1 px-2 bg-gray-900 text-xs font-medium text-white rounded shadow-sm dark:bg-neutral-700" role="tooltip">
+                    Dislike
+                  </span>
+                </button>
+            </div>
+        </div>
+        <div class="justify-end items-center gap-1 flex">
+            
+        </div>
+    </div>
+</div>
